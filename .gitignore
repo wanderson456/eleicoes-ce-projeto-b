@@ -1,0 +1,15 @@
+﻿node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+data/raw/
+.venv/
+__pycache__/
+*.pyc
