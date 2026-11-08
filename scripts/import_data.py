@@ -145,9 +145,11 @@ def database_url() -> str:
     parsed = urlsplit(url)
 
     # O importador roda no Windows, fora da rede interna do Compose.
+    port = os.getenv("TEST_DATABASE_PORT", "5433")
+
     return urlunsplit((
         parsed.scheme,
-        f"{parsed.username}:{parsed.password}@localhost:5433",
+        f"{parsed.username}:{parsed.password}@localhost:{port}",
         parsed.path,
         parsed.query,
         parsed.fragment

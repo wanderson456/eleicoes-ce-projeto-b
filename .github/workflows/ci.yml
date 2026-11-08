@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: eleicoes_ce
+          POSTGRES_USER: eleicoes_app
+          POSTGRES_PASSWORD: ${{ secrets.CI_POSTGRES_PASSWORD || 'ci_test_only_password' }}
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U eleicoes_app -d eleicoes_ce"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://eleicoes_app:${{ secrets.CI_POSTGRES_PASSWORD || 'ci_test_only_password' }}@localhost:5432/eleicoes_ce
+      TEST_DATABASE_PORT: "5432"
+      PGPASSWORD: ${{ secrets.CI_POSTGRES_PASSWORD || 'ci_test_only_password' }}
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v7
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Configurar Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Instalar dependências Node.js
+        run: npm ci
+
+      - name: Instalar dependências Python
+        run: pip install -r requirements.txt
+
+      - name: Aplicar schema do banco
+        run: |
+          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/001_schema.sql
+
+      - name: Aplicar classificação dos votos
+        run: |
+          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/002_classificacao_votos.sql
+
+      - name: Importar amostras eleitorais
+        run: python scripts/import_data.py --mode sample
+
+      - name: Compilar TypeScript
+        run: npm run build
+
+      - name: Verificar qualidade do código
+        run: npm run lint
+
+      - name: Executar testes unitários
+        run: npm run test:unit
+
+      - name: Executar testes de integração
+        run: npm run test:integration
+
+      - name: Verificar cobertura
+        run: npm run test:coverage

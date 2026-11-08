@@ -6,7 +6,9 @@ export default defineConfig({
       provider: "v8",
       include: [
         "src/domain/**/*.ts",
-        "src/repositories/**/*.ts"
+        "src/repositories/**/*.ts",
+        "src/services/**/*.ts",
+        "src/controllers/**/*.ts"
       ],
       exclude: [
           "src/domain/vote-repository.ts"

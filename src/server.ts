@@ -1,7 +1,8 @@
-﻿import app from "./app.js";
+﻿import { createApp } from "./app.js";
 import { pool } from "./config/database.js";
 
 const port = Number(process.env.PORT ?? 3000);
+const app = createApp(pool);
 
 try {
   await pool.query("SELECT 1");
