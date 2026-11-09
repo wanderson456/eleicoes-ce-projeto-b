@@ -4,6 +4,7 @@ import { pinoHttp } from "pino-http";
 import { logger } from "./config/logger.js";
 import { createVoteRouter } from "./routes/vote-routes.js";
 import { errorHandler } from "./middlewares/error-handler.js";
+import { createSectionRouter } from "./routes/section-routes.js";
 import {
   metricsHandler,
   recordHttpMetric
@@ -62,6 +63,7 @@ export function createApp(database: Pool) {
   app.get("/metrics", metricsHandler);
 
   app.use("/municipios", createVoteRouter(database));
+  app.use("/municipios", createSectionRouter(database));
 
   app.use(errorHandler);
 

@@ -149,6 +149,50 @@ A importação executa o carregamento em tabelas de staging e, em seguida, inser
 GET /health
 ```
 
+### Listagem de seções por município
+
+```http
+GET /municipios/{codigo}/secoes
+```
+
+Lista as seções eleitorais cadastradas para um município, incluindo suas zonas eleitorais e coordenadas geográficas quando disponíveis.
+
+Exemplo:
+
+```http
+GET /municipios/2300200/secoes?pagina=1&limite=20
+```
+
+Parâmetros de rota:
+
+| Parâmetro | Obrigatório | Descrição |
+|---|---|---|
+| `codigo` | Sim | Código IBGE do município, com exatamente sete dígitos |
+
+Parâmetros de consulta:
+
+| Parâmetro | Obrigatório | Padrão | Descrição |
+|---|---|---|---|
+| `pagina` | Não | 1 | Página dos resultados |
+| `limite` | Não | 20 | Registros por página, de 1 a 100 |
+
+A resposta contém:
+
+- `items`: lista de seções, com código do município, zona, seção, latitude e longitude;
+- `total`: quantidade total de registros encontrados;
+- `page`: página atual;
+- `limit`: quantidade máxima de registros por página;
+- `totalPages`: quantidade total de páginas.
+
+Respostas HTTP principais:
+
+| Código | Significado |
+|---|---|
+| 200 | Consulta realizada |
+| 400 | Parâmetros inválidos |
+| 500 | Erro interno do servidor |
+
+
 ### Consulta de votos por seção
 
 ```http

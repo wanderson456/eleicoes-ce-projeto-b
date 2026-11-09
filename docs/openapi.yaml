@@ -40,6 +40,106 @@ paths:
                 required:
                   - status
 
+  /municipios/{codigo}/secoes:
+    get:
+      tags:
+        - Votos
+      summary: Lista as secoes eleitorais de um municipio
+      operationId: getSectionsByMunicipality
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          description: Codigo IBGE do municipio com exatamente sete digitos
+          schema:
+            type: string
+            pattern: '^\d{7}$'
+          example: "2300200"
+
+        - name: pagina
+          in: query
+          required: false
+          description: Numero da pagina
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+
+        - name: limite
+          in: query
+          required: false
+          description: Quantidade de registros por pagina
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+
+      responses:
+        "200":
+          description: Lista de secoes retornada com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        municipalityCode:
+                          type: string
+                          example: "2300200"
+                        zone:
+                          type: integer
+                          example: 30
+                        section:
+                          type: integer
+                          example: 1
+                        latitude:
+                          type: number
+                          nullable: true
+                          example: -3.745
+                        longitude:
+                          type: number
+                          nullable: true
+                          example: -38.520
+                      required:
+                        - municipalityCode
+                        - zone
+                        - section
+                        - latitude
+                        - longitude
+                  total:
+                    type: integer
+                    example: 166
+                  page:
+                    type: integer
+                    example: 1
+                  limit:
+                    type: integer
+                    example: 20
+                  totalPages:
+                    type: integer
+                    example: 9
+                required:
+                  - items
+                  - total
+                  - page
+                  - limit
+                  - totalPages
+
+        "400":
+          description: Parametros invalidos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+        "500":
+          description: Erro interno do servidor
+
   /municipios/{codigo}/secoes/{zona}/{secao}/votos:
     get:
       tags:
