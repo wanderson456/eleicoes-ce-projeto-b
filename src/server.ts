@@ -1,5 +1,6 @@
 ﻿import { createApp } from "./app.js";
 import { pool } from "./config/database.js";
+import { logger } from "./config/logger.js";
 
 const port = Number(process.env.PORT ?? 3000);
 const app = createApp(pool);
@@ -7,12 +8,12 @@ const app = createApp(pool);
 try {
   await pool.query("SELECT 1");
 
-  console.log("Conexão com PostgreSQL estabelecida.");
+  logger.info("Conexão com PostgreSQL estabelecida.");
 
   app.listen(port, () => {
-    console.log(`API iniciada na porta ${port}`);
+    logger.info({ port }, "API iniciada.");
   });
 } catch (error) {
-  console.error("Falha ao conectar ao PostgreSQL:", error);
+  logger.fatal({ err: error }, "Falha ao conectar ao PostgreSQL.");
   process.exit(1);
 }
