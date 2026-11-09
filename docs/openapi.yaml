@@ -1,0 +1,256 @@
+openapi: 3.0.3
+
+info:
+  title: API Eleições Ceará 2022
+  version: 1.0.0
+  description: API REST para consulta dos resultados eleitorais do Ceará nas eleições de 2022.
+
+servers:
+  - url: http://localhost:3001
+    description: Ambiente local com Docker Compose
+
+security: []
+
+tags:
+  - name: Saúde
+    description: Verificação de disponibilidade da API
+  - name: Votos
+    description: Consulta de resultados eleitorais por seção
+  - name: Observabilidade
+    description: Métricas HTTP da aplicação
+
+paths:
+  /health:
+    get:
+      tags:
+        - Saúde
+      summary: Verifica a saúde da API
+      operationId: getHealth
+      responses:
+        "200":
+          description: API disponível
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                required:
+                  - status
+
+  /municipios/{codigo}/secoes/{zona}/{secao}/votos:
+    get:
+      tags:
+        - Votos
+      summary: Consulta votos registrados em uma seção eleitoral
+      operationId: getVotesBySection
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          description: Código do município com exatamente cinco dígitos
+          schema:
+            type: string
+            pattern: '^\d{5}$'
+          example: "23044"
+
+        - name: zona
+          in: path
+          required: true
+          description: Número positivo da zona eleitoral
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+
+        - name: secao
+          in: path
+          required: true
+          description: Número positivo da seção eleitoral
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+
+        - name: tipo
+          in: query
+          required: false
+          description: Filtra os registros pelo tipo de voto
+          schema:
+            type: string
+            enum:
+              - NOMINAL
+              - LEGENDA
+              - BRANCO
+              - NULO
+
+        - name: pagina
+          in: query
+          required: false
+          description: Número da página dos resultados
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+
+        - name: limite
+          in: query
+          required: false
+          description: Quantidade de registros por página
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+
+      responses:
+        "200":
+          description: Consulta realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaginatedVoteResult"
+
+        "400":
+          description: Parâmetros de consulta inválidos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+        "500":
+          description: Erro interno do servidor
+
+  /metrics:
+    get:
+      tags:
+        - Observabilidade
+      summary: Consulta métricas HTTP da aplicação
+      operationId: getMetrics
+      responses:
+        "200":
+          description: Métricas no formato de exposição do Prometheus
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |
+                # HELP http_requests_total Total de requisições HTTP.
+                # TYPE http_requests_total counter
+                http_requests_total{method="GET",route="/health",status="200"} 1
+
+components:
+  schemas:
+    VoteRecord:
+      type: object
+      properties:
+        year:
+          type: integer
+          example: 2022
+        round:
+          type: integer
+          example: 1
+        municipalityCode:
+          type: string
+          example: "23044"
+        municipalityName:
+          type: string
+          example: Município de exemplo
+        zone:
+          type: integer
+          example: 1
+        section:
+          type: integer
+          example: 1
+        officeCode:
+          type: integer
+          example: 1
+        officeName:
+          type: string
+          example: Presidente
+        voteCode:
+          type: string
+          example: "12"
+        voteName:
+          type: string
+          example: Candidato ou partido
+        quantity:
+          type: integer
+          example: 100
+        candidateId:
+          type: integer
+          example: 123
+        voteType:
+          type: string
+          enum:
+            - NOMINAL
+            - LEGENDA
+            - BRANCO
+            - NULO
+        pollingPlaceCode:
+          type: integer
+          example: 123
+        pollingPlaceName:
+          type: string
+          example: Local de votação
+        pollingPlaceAddress:
+          type: string
+          example: Endereço do local de votação
+      required:
+        - year
+        - round
+        - municipalityCode
+        - municipalityName
+        - zone
+        - section
+        - officeCode
+        - officeName
+        - voteCode
+        - voteName
+        - quantity
+        - candidateId
+        - voteType
+        - pollingPlaceCode
+        - pollingPlaceName
+        - pollingPlaceAddress
+
+    PaginatedVoteResult:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/VoteRecord"
+        total:
+          type: integer
+          example: 100
+        page:
+          type: integer
+          example: 1
+        limit:
+          type: integer
+          example: 20
+        totalPages:
+          type: integer
+          example: 5
+      required:
+        - items
+        - total
+        - page
+        - limit
+        - totalPages
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Parâmetros inválidos
+        message:
+          type: string
+          example: O limite deve ser um inteiro entre 1 e 100.
+      required:
+        - error
+        - message
