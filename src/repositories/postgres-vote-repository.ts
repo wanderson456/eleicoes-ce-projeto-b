@@ -26,7 +26,7 @@ type VoteRow = Omit<VoteRecord, "candidateId"> & {
 }
 
 export class PostgresVoteRepository implements VoteRepository {
-  constructor(private readonly database: Pool) {}
+  constructor(private readonly database: Pool) { }
 
   async findBySection(
     criteria: VoteSearchCriteria
@@ -35,6 +35,8 @@ export class PostgresVoteRepository implements VoteRepository {
       criteria.municipalityCode,
       criteria.zone,
       criteria.section,
+      criteria.year,
+      criteria.round,
       criteria.voteType ?? null
     ];
 
@@ -42,7 +44,9 @@ export class PostgresVoteRepository implements VoteRepository {
       WHERE cd_municipio_tse = $1
         AND zona = $2
         AND secao = $3
-        AND ($4::varchar IS NULL OR tipo_voto = $4)
+        AND ano_eleicao = $4
+         AND turno = $5
+        AND ($6::varchar IS NULL OR tipo_voto = $6)
     `;
 
     const countResult = await this.database.query<{ total: number }>(
@@ -79,26 +83,27 @@ export class PostgresVoteRepository implements VoteRepository {
         FROM votos
         ${whereClause}
         ORDER BY cd_cargo, nr_votavel, sq_candidato
-        LIMIT $5
-        OFFSET $6
-      `,
+        LIMIT $7
+        OFFSET $8
+       `,
       [...parameters, criteria.limit, offset]
     );
-const items: VoteRecord[] = result.rows.map((row) => {
-  const candidateId = Number(row.candidateId);
+    const items: VoteRecord[] = result.rows.map((row) => {
+      const candidateId = Number(row.candidateId);
 
-  if (!Number.isSafeInteger(candidateId)) {
-    throw new Error("Identificador do candidato excede o limite seguro.");
+      if (!Number.isSafeInteger(candidateId)) {
+        throw new Error("Identificador do candidato excede o limite seguro.");
+      }
+
+      return { ...row, candidateId };
+    });
+
+    return {
+      items,
+      total,
+      page: criteria.page,
+      limit: criteria.limit,
+      totalPages: Math.ceil(total / criteria.limit)
+    };
   }
-
-  return { ...row, candidateId };
-});
-
-return {
-  items,
-  total,
-  page: criteria.page,
-  limit: criteria.limit,
-  totalPages: Math.ceil(total / criteria.limit)
-};
-}}
+}

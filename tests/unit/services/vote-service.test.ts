@@ -10,6 +10,8 @@ describe("VoteService", () => {
     municipalityCode: "13005",
     zone: 30,
     section: 82,
+    year: 2022,
+    round: 1,
     page: 1,
     limit: 20
   };
@@ -55,11 +57,26 @@ describe("VoteService", () => {
     expect(findBySection).toHaveBeenCalledOnce();
   });
 
+  it("accepts the second election round", async () => {
+    const { service, findBySection } = createService();
+
+    await service.findBySection({
+      ...criteria,
+      round: 2
+    });
+
+    expect(findBySection).toHaveBeenCalledOnce();
+  });
+
   it.each([
     ["municipalityCode", { municipalityCode: "1234" }],
     ["zone", { zone: 0 }],
     ["section", { section: -1 }],
     ["page", { page: 0 }],
+    ["year below minimum", { year: 999 }],
+    ["year above maximum", { year: 10000 }],
+    ["fractional year", { year: 2022.5 }],
+    ["invalid round", { round: 3 }],
     ["limit below minimum", { limit: 0 }],
     ["limit above maximum", { limit: 101 }],
     ["fractional page", { page: 1.5 }],

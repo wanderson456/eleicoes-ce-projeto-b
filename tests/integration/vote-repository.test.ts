@@ -79,7 +79,9 @@ describe("Integração: consulta de votos por seção", () => {
   const section = {
     municipalityCode: "99999",
     zone: 99,
-    section: 99
+    section: 99,
+    year: 2022,
+    round: 1
   };
 
   it("consulta os quatro tipos de voto existentes na seção", async () => {
@@ -113,9 +115,9 @@ describe("Integração: consulta de votos por seção", () => {
       result.items.every((item) => item.voteType === "NULO")
     ).toBe(true);
   });
-    it("consulta votos pela API HTTP", async () => {
+  it("consulta votos pela API HTTP", async () => {
     const response = await request(app)
-      .get("/municipios/99999/secoes/99/99/votos")
+      .get("/municipios/99999/secoes/99/99/votos?ano=2022&turno=1")
       .expect(200);
 
     expect(response.body.total).toBeGreaterThan(0);
@@ -126,7 +128,7 @@ describe("Integração: consulta de votos por seção", () => {
 
   it("filtra votos nulos pela API HTTP", async () => {
     const response = await request(app)
-      .get("/municipios/99999/secoes/99/99/votos?tipo=NULO")
+      .get("/municipios/99999/secoes/99/99/votos?ano=2022&turno=1&tipo=NULO")
       .expect(200);
 
     expect(response.body.total).toBeGreaterThan(0);
@@ -139,7 +141,7 @@ describe("Integração: consulta de votos por seção", () => {
 
   it("retorna 400 para código de município inválido", async () => {
     const response = await request(app)
-      .get("/municipios/abc/secoes/99/99/votos")
+      .get("/municipios/abc/secoes/99/99/votos?ano=2022&turno=1")
       .expect(400);
 
     expect(response.body.error).toBe("Parâmetros inválidos");

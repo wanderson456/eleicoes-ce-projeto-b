@@ -23,7 +23,7 @@ export class InvalidVoteSearchCriteriaError extends Error {
 }
 
 export class VoteService {
-  constructor(private readonly voteRepository: VoteRepository) {}
+  constructor(private readonly voteRepository: VoteRepository) { }
 
   async findBySection(
     criteria: VoteSearchCriteria
@@ -43,6 +43,24 @@ export class VoteService {
     if (!Number.isInteger(criteria.section) || criteria.section < 1) {
       throw new InvalidVoteSearchCriteriaError(
         "A seção eleitoral deve ser um inteiro positivo."
+      );
+    }
+    if (
+      !Number.isInteger(criteria.year) ||
+      criteria.year < 1000 ||
+      criteria.year > 9999
+    ) {
+      throw new InvalidVoteSearchCriteriaError(
+        "O ano da eleição deve conter quatro dígitos."
+      );
+    }
+
+    if (
+      !Number.isInteger(criteria.round) ||
+      ![1, 2].includes(criteria.round)
+    ) {
+      throw new InvalidVoteSearchCriteriaError(
+        "O turno da eleição deve ser 1 ou 2."
       );
     }
 

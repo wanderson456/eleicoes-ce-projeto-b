@@ -1,4 +1,5 @@
-﻿import { describe, expect, it, vi } from "vitest";
+﻿
+import { describe, expect, it, vi } from "vitest";
 import type { Pool } from "pg";
 import { PostgresVoteRepository } from "../../../src/repositories/postgres-vote-repository.js";
 
@@ -35,6 +36,8 @@ describe("PostgresVoteRepository", () => {
       municipalityCode: "15750",
       zone: 15,
       section: 221,
+      year: 2022,
+      round: 1,
       page: 1,
       limit: 10
     });
@@ -47,7 +50,7 @@ describe("PostgresVoteRepository", () => {
     expect(query).toHaveBeenNthCalledWith(
       1,
       expect.stringContaining("COUNT(*)"),
-      ["15750", 15, 221, null]
+      ["15750", 15, 221, 2022, 1, null]
     );
   });
 
@@ -64,16 +67,18 @@ describe("PostgresVoteRepository", () => {
       municipalityCode: "15750",
       zone: 15,
       section: 221,
+      year: 2022,
+      round: 1,
       voteType: "NULO",
       page: 1,
-      limit: 20
+      limit: 10
     });
 
     expect(result.total).toBe(1);
     expect(query).toHaveBeenNthCalledWith(
       1,
-      expect.stringContaining("tipo_voto = $4"),
-      ["15750", 15, 221, "NULO"]
+      expect.stringContaining("tipo_voto = $6"),
+      ["15750", 15, 221, 2022, 1, "NULO"]
     );
   });
 
@@ -90,6 +95,8 @@ describe("PostgresVoteRepository", () => {
       municipalityCode: "15750",
       zone: 15,
       section: 221,
+      year: 2022,
+      round: 1,
       page: 2,
       limit: 20
     });
@@ -99,8 +106,8 @@ describe("PostgresVoteRepository", () => {
 
     expect(query).toHaveBeenNthCalledWith(
       2,
-      expect.stringContaining("OFFSET $6"),
-      ["15750", 15, 221, null, 20, 20]
+      expect.stringContaining("OFFSET $8"),
+      ["15750", 15, 221, 2022, 1, null, 20, 20]
     );
   });
 
@@ -120,6 +127,8 @@ describe("PostgresVoteRepository", () => {
         municipalityCode: "15750",
         zone: 15,
         section: 221,
+        year: 2022,
+        round: 1,
         page: 1,
         limit: 20
       })
@@ -127,7 +136,8 @@ describe("PostgresVoteRepository", () => {
       "Identificador do candidato excede o limite seguro."
     );
   });
-    it("returns an empty result when the count query has no rows", async () => {
+
+  it("returns an empty result when the count query has no rows", async () => {
     const query = vi.fn()
       .mockResolvedValueOnce({ rows: [] })
       .mockResolvedValueOnce({ rows: [] });
@@ -137,18 +147,20 @@ describe("PostgresVoteRepository", () => {
     );
 
     const result = await repository.findBySection({
-      municipalityCode: "99999",
-      zone: 99,
-      section: 999,
+      municipalityCode: "15750",
+      zone: 15,
+      section: 221,
+      year: 2022,
+      round: 1,
       page: 1,
-      limit: 20
+      limit: 10
     });
 
     expect(result).toEqual({
       items: [],
       total: 0,
       page: 1,
-      limit: 20,
+      limit: 10,
       totalPages: 0
     });
   });

@@ -1,4 +1,4 @@
-import type { Request, Response, NextFunction, RequestHandler } from "express";
+﻿import type { Request, Response, NextFunction, RequestHandler } from "express";
 import type { VoteType } from "../domain/vote-classification.js";
 import {
   InvalidVoteSearchCriteriaError
@@ -38,6 +38,8 @@ export function createVoteController(
         municipalityCode: typeof request.params.codigo === "string" ? request.params.codigo : "",
         zone: Number(request.params.zona),
         section: Number(request.params.secao),
+        year: parseInteger(request.query.ano, 0),
+        round: parseInteger(request.query.turno, 0),
         ...(voteType === undefined ? {} : { voteType: voteType as VoteType }),
         page: parseInteger(request.query.pagina, 1),
         limit: parseInteger(request.query.limite, 20)

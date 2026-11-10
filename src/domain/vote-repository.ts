@@ -4,11 +4,12 @@ export interface VoteSearchCriteria {
   municipalityCode: string;
   zone: number;
   section: number;
+  year: number;
+  round: number;
   voteType?: VoteType;
   page: number;
   limit: number;
 }
-
 export interface VoteRecord {
   year: number;
   round: number;

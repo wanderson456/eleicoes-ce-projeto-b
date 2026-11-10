@@ -11,6 +11,8 @@ describe("VoteController", () => {
     municipalityCode: "13005",
     zone: 30,
     section: 82,
+    year: 2022,
+    round: 1,
     page: 1,
     limit: 20
   };
@@ -54,7 +56,10 @@ describe("VoteController", () => {
     const next = vi.fn() as NextFunction;
 
     await controller(
-      createRequest(),
+      createRequest(undefined, {
+        ano: "2022",
+        turno: "1"
+      }),
       response,
       next
     );
@@ -73,6 +78,8 @@ describe("VoteController", () => {
 
     await controller(
       createRequest(undefined, {
+        ano: "2022",
+        turno: "1",
         tipo: "NULO",
         pagina: "2",
         limite: "10"
@@ -88,6 +95,9 @@ describe("VoteController", () => {
       limit: 10
     });
   });
+
+
+
 
   it("rejects repeated vote type query parameters", async () => {
     const findBySection = vi.fn();
