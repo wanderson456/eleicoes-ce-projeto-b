@@ -64,3 +64,9 @@ Também foi descartada porque misturaria regras de negócio com detalhes de pers
 - `src/repositories/postgres-vote-repository.ts`
 - `src/controllers/vote-controller.ts`
 - `src/routes/vote-routes.ts`
+
+- `src/domain/vote-repository.ts`
+- `src/services/vote-service.ts`
+- `src/repositories/postgres-vote-repository.ts`
+- `src/controllers/vote-controller.ts`
+- `src/routes/vote-routes.ts`
