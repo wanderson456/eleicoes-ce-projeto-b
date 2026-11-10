@@ -1,3 +1,4 @@
+
 import type { Request, Response, NextFunction } from "express";
 import type { CandidateService } from "../services/candidate-service.js";
 import {
@@ -32,6 +33,50 @@ export function createCandidateController(
           ? Number(request.query.limite)
           : 20
       });
+
+      response.status(200).json(result);
+    } catch (error) {
+      if (error instanceof InvalidCandidateSearchCriteriaError) {
+        response.status(400).json({
+          error: "Parâmetros inválidos",
+          message: error.message
+        });
+        return;
+      }
+
+      next(error);
+    }
+  };
+}
+
+export function createCandidateGeographicController(
+  service: CandidateService
+) {
+  return async (
+    request: Request,
+    response: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const result = await service.findGeographicDistribution({
+        sqCandidato: Number(request.params.sqCandidato),
+        year: Number(request.query.ano),
+        round: Number(request.query.turno),
+        page: request.query.pagina
+          ? Number(request.query.pagina)
+          : 1,
+        limit: request.query.limite
+          ? Number(request.query.limite)
+          : 20
+      });
+
+      if (result === null) {
+        response.status(404).json({
+          error: "Candidato não encontrado",
+          message: "Não existe candidato com o identificador, ano e turno informados."
+        });
+        return;
+      }
 
       response.status(200).json(result);
     } catch (error) {

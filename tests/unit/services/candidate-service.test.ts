@@ -178,4 +178,66 @@ describe("CandidateService", () => {
 
         expect(findAll).toHaveBeenCalledWith(criteria);
     });
+
+
+    describe("findGeographicDistribution", () => {
+        const geographicCriteria = {
+            sqCandidato: 123456789,
+            year: 2022,
+            round: 1,
+            page: 1,
+            limit: 20
+        };
+
+        it("delegates a valid geographic search to the repository", async () => {
+            const findGeographicDistribution = vi.fn().mockResolvedValue(null);
+
+            const repository = {
+                findAll: vi.fn(),
+                findGeographicDistribution
+            } as unknown as CandidateRepository;
+
+            const service = new CandidateService(repository);
+
+            const result = await service.findGeographicDistribution(
+                geographicCriteria
+            );
+
+            expect(result).toBeNull();
+            expect(findGeographicDistribution).toHaveBeenCalledWith(
+                geographicCriteria
+            );
+            expect(findGeographicDistribution).toHaveBeenCalledOnce();
+        });
+
+        it.each([
+            ["zero", 0],
+            ["negative", -1],
+            ["fractional", 123.5],
+            ["unsafe integer", Number.MAX_SAFE_INTEGER + 1]
+        ])(
+            "rejects an invalid candidate identifier: %s",
+            async (_case, sqCandidato) => {
+                const findGeographicDistribution = vi.fn();
+
+                const repository = {
+                    findAll: vi.fn(),
+                    findGeographicDistribution
+                } as unknown as CandidateRepository;
+
+                const service = new CandidateService(repository);
+
+                await expect(
+                    service.findGeographicDistribution({
+                        ...geographicCriteria,
+                        sqCandidato
+                    })
+                ).rejects.toBeInstanceOf(
+                    InvalidCandidateSearchCriteriaError
+                );
+
+                expect(findGeographicDistribution).not.toHaveBeenCalled();
+            }
+        );
+    });
 });

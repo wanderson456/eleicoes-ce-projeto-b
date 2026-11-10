@@ -30,8 +30,43 @@ export interface PaginatedCandidates {
   totalPages: number;
 }
 
+
+
+export interface CandidateGeographicSearchCriteria {
+  sqCandidato: number;
+  year: number;
+  round: number;
+  page: number;
+  limit: number;
+}
+
+export interface MunicipalityVoteDistribution {
+  ibgeCode: string;
+  municipality: string;
+  votes: number;
+  latitude: number | null;
+  longitude: number | null;
+}
+
+export interface CandidateGeographicDistribution {
+  sqCandidato: number;
+  year: number;
+  round: number;
+  municipalities: MunicipalityVoteDistribution[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+  
+}
 export interface CandidateRepository {
   findAll(
     criteria: CandidateSearchCriteria
   ): Promise<PaginatedCandidates>;
+
+  findGeographicDistribution(
+    criteria: CandidateGeographicSearchCriteria
+  ): Promise<CandidateGeographicDistribution | null>;
 }

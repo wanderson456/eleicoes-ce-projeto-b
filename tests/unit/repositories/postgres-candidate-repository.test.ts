@@ -316,4 +316,87 @@ describe("PostgresCandidateRepository", () => {
         expect(result.items[0]?.partyName).toBeNull();
         expect(result.items[0]?.ballotName).toBeNull();
     });
+
+
+    describe("findGeographicDistribution", () => {
+        it("returns candidate votes grouped by municipality with coordinates", async () => {
+            const query = vi.fn()
+                .mockResolvedValueOnce({
+                    rows: [{ "?column?": 1 }]
+                })
+                .mockResolvedValueOnce({
+                    rows: [{ total: "1" }]
+                })
+                .mockResolvedValueOnce({
+                    rows: [{
+                        ibge_code: "2301307",
+                        municipality: "ARARIPE",
+                        total_votes: "4590",
+                        latitude: -7.21,
+                        longitude: -40.13
+                    }]
+                });
+
+            const repository = createRepository(query);
+
+            const result = await repository.findGeographicDistribution({
+                sqCandidato: 123456789,
+                year: 2022,
+                round: 1,
+                page: 1,
+                limit: 20
+            });
+
+            expect(result).toEqual({
+                sqCandidato: 123456789,
+                year: 2022,
+                round: 1,
+                municipalities: [{
+                    ibgeCode: "2301307",
+                    municipality: "ARARIPE",
+                    votes: 4590,
+                    latitude: -7.21,
+                    longitude: -40.13
+                }],
+                pagination: {
+                    page: 1,
+                    limit: 20,
+                    total: 1,
+                    totalPages: 1
+                }
+            });
+
+            expect(query).toHaveBeenCalledTimes(3);
+
+            expect(query.mock.calls[2]?.[1]).toEqual([
+                123456789,
+                2022,
+                1,
+                20,
+                0
+            ]);
+        });
+    });
+
+
+it("returns null when the candidate does not exist", async () => {
+    const query = vi.fn().mockResolvedValueOnce({
+        rows: []
+    });
+
+    const repository = createRepository(query);
+
+    const result = await repository.findGeographicDistribution({
+        sqCandidato: 999999999,
+        year: 2022,
+        round: 1,
+        page: 1,
+        limit: 20
+    });
+
+    expect(result).toBeNull();
+    expect(query).toHaveBeenCalledOnce();
+});
+
+
 });
