@@ -46,15 +46,15 @@ beforeAll(async () => {
         )
         VALUES
             (2022, 1, 900000000004, '12347',
-             'CANDIDATO TESTE C', 'CANDIDATO C', 7,
+             'INTEGRACAO CANDIDATOS C', 'CANDIDATO C', 7,
              'Deputado Estadual', 20, 'XYZ', 'PARTIDO XYZ'),
 
             (2022, 1, 900000000005, '12348',
-             'CANDIDATO TESTE D', 'CANDIDATO D', 7,
+             'INTEGRACAO CANDIDATOS D', 'CANDIDATO D', 7,
              'Deputado Estadual', 20, 'XYZ', 'PARTIDO XYZ'),
 
             (2022, 1, 900000000006, '12349',
-             'CANDIDATO TESTE SEM VOTOS',
+             'INTEGRACAO CANDIDATOS SEM VOTOS',
              'CANDIDATO SEM VOTOS', 7,
              'Deputado Estadual', 20, 'XYZ', 'PARTIDO XYZ')
     `);
@@ -99,7 +99,7 @@ afterAll(async () => {
 describe("Integração: consulta de candidatos", () => {
     it("consulta candidatos pela API HTTP", async () => {
         const response = await request(app)
-            .get("/candidatos?ano=2022&turno=1&cargo=7&busca=CANDIDATO TESTE C")
+            .get("/candidatos?ano=2022&turno=1&cargo=7&busca=INTEGRACAO CANDIDATOS C")
             .expect(200);
 
         expect(response.body.items).toHaveLength(1);
@@ -110,7 +110,7 @@ describe("Integração: consulta de candidatos", () => {
 
     it("retorna os candidatos ordenados pela quantidade de votos", async () => {
         const response = await request(app)
-            .get("/candidatos?ano=2022&turno=1&cargo=7&busca=CANDIDATO TESTE")
+            .get("/candidatos?ano=2022&turno=1&cargo=7&busca=INTEGRACAO CANDIDATOS")
             .expect(200);
 
         expect(response.body.items[0].candidateNumber).toBe("12347");
@@ -142,7 +142,7 @@ describe("Integração: consulta de candidatos", () => {
 
     it("aplica paginação aos resultados", async () => {
         const response = await request(app)
-            .get("/candidatos?ano=2022&turno=1&cargo=7&busca=CANDIDATO TESTE&pagina=2&limite=1")
+            .get("/candidatos?ano=2022&turno=1&cargo=7&busca=INTEGRACAO CANDIDATOS&pagina=2&limite=1")
             .expect(200);
 
         expect(response.body.items).toHaveLength(1);
