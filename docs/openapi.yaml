@@ -1,9 +1,9 @@
 openapi: 3.0.3
 
 info:
-  title: API Eleições Ceará 2022
+  title: API Eleições Ceará
   version: 1.0.0
-  description: API REST para consulta dos resultados eleitorais do Ceará nas eleições de 2022.
+  description: API REST para consulta de dados eleitorais por município e seção, com suporte a diferentes anos e turnos eleitorais.
 
 servers:
   - url: http://localhost:3001
@@ -18,6 +18,8 @@ tags:
     description: Consulta de resultados eleitorais por seção
   - name: Observabilidade
     description: Métricas HTTP da aplicação
+  - name: Resultados
+    description: Consulta consolidada de resultados eleitorais por município, cargo e eleição
 
 paths:
   /health:
@@ -55,7 +57,15 @@ paths:
             type: string
             pattern: '^\d{7}$'
           example: "2300200"
-
+        - name: ano
+          in: query
+          required: true
+          description: Ano da eleição
+          schema:
+            type: integer
+            minimum: 1000
+            maximum: 9999
+          example: 2022
         - name: pagina
           in: query
           required: false
@@ -64,7 +74,6 @@ paths:
             type: integer
             minimum: 1
             default: 1
-
         - name: limite
           in: query
           required: false
@@ -74,7 +83,6 @@ paths:
             minimum: 1
             maximum: 100
             default: 20
-
       responses:
         "200":
           description: Lista de secoes retornada com sucesso
@@ -129,14 +137,12 @@ paths:
                   - page
                   - limit
                   - totalPages
-
         "400":
           description: Parametros invalidos
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
-
         "500":
           description: Erro interno do servidor
 
@@ -155,7 +161,6 @@ paths:
             type: string
             pattern: '^\d{5}$'
           example: "23044"
-
         - name: zona
           in: path
           required: true
@@ -164,7 +169,6 @@ paths:
             type: integer
             minimum: 1
           example: 1
-
         - name: secao
           in: path
           required: true
@@ -173,7 +177,23 @@ paths:
             type: integer
             minimum: 1
           example: 1
-
+        - name: ano
+          in: query
+          required: true
+          description: Ano da eleicao
+          schema:
+            type: integer
+            minimum: 1000
+            maximum: 9999
+          example: 2022
+        - name: turno
+          in: query
+          required: true
+          description: Turno eleitoral
+          schema:
+            type: integer
+            enum: [1, 2]
+          example: 1
         - name: tipo
           in: query
           required: false
@@ -185,7 +205,6 @@ paths:
               - LEGENDA
               - BRANCO
               - NULO
-
         - name: pagina
           in: query
           required: false
@@ -194,7 +213,6 @@ paths:
             type: integer
             minimum: 1
             default: 1
-
         - name: limite
           in: query
           required: false
@@ -204,7 +222,6 @@ paths:
             minimum: 1
             maximum: 100
             default: 20
-
       responses:
         "200":
           description: Consulta realizada com sucesso
@@ -212,14 +229,71 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PaginatedVoteResult"
-
         "400":
           description: Parâmetros de consulta inválidos
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Erro interno do servidor
 
+  /municipios/{codigo}/resultados:
+    get:
+      tags:
+        - Resultados
+      summary: Consulta resultados eleitorais de um município
+      description: Retorna os resultados agrupados por cargo, incluindo candidatos, partidos e classificação dos votos.
+      operationId: getResultsByMunicipality
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          description: Código TSE do município com exatamente cinco dígitos
+          schema:
+            type: string
+            pattern: '^\d{5}$'
+          example: "13250"
+        - name: ano
+          in: query
+          required: true
+          description: Ano da eleição
+          schema:
+            type: integer
+            minimum: 1000
+            maximum: 9999
+          example: 2022
+        - name: turno
+          in: query
+          required: true
+          description: Turno eleitoral
+          schema:
+            type: integer
+            enum: [1, 2]
+          example: 1
+        - name: cargo
+          in: query
+          required: false
+          description: Código do cargo para filtrar os resultados
+          schema:
+            type: integer
+            minimum: 1
+          example: 7
+      responses:
+        "200":
+          description: Resultados eleitorais retornados com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MunicipalityResult"
+        "400":
+          description: Parâmetros de consulta inválidos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Resultados não encontrados
         "500":
           description: Erro interno do servidor
 
@@ -341,6 +415,157 @@ components:
         - page
         - limit
         - totalPages
+
+    CandidateResult:
+      type: object
+      properties:
+        candidateId:
+          type: integer
+          format: int64
+          example: 123456789
+        candidateNumber:
+          type: string
+          example: "12345"
+        candidateName:
+          type: string
+          example: Candidato exemplo
+        partyNumber:
+          type: integer
+          nullable: true
+          example: 10
+        partyAbbreviation:
+          type: string
+          nullable: true
+          example: ABC
+        partyName:
+          type: string
+          nullable: true
+          example: Partido ABC
+        votes:
+          type: integer
+          example: 6000
+        percentage:
+          type: number
+          format: double
+          example: 50.00
+      required:
+        - candidateId
+        - candidateNumber
+        - candidateName
+        - partyNumber
+        - partyAbbreviation
+        - partyName
+        - votes
+        - percentage
+
+    PartyResult:
+      type: object
+      properties:
+        partyNumber:
+          type: integer
+          example: 10
+        partyAbbreviation:
+          type: string
+          nullable: true
+          example: ABC
+        partyName:
+          type: string
+          nullable: true
+          example: Partido ABC
+        nominalVotes:
+          type: integer
+          example: 11000
+        legendVotes:
+          type: integer
+          example: 1000
+        totalVotes:
+          type: integer
+          example: 12000
+        percentage:
+          type: number
+          format: double
+          example: 100.00
+      required:
+        - partyNumber
+        - partyAbbreviation
+        - partyName
+        - nominalVotes
+        - legendVotes
+        - totalVotes
+        - percentage
+
+    OfficeResult:
+      type: object
+      properties:
+        officeCode:
+          type: integer
+          example: 7
+        officeName:
+          type: string
+          example: Deputado Estadual
+        totalVotes:
+          type: integer
+          example: 12800
+        validVotes:
+          type: integer
+          example: 12000
+        nominalVotes:
+          type: integer
+          example: 11000
+        legendVotes:
+          type: integer
+          example: 1000
+        blankVotes:
+          type: integer
+          example: 500
+        nullVotes:
+          type: integer
+          example: 300
+        candidates:
+          type: array
+          items:
+            $ref: "#/components/schemas/CandidateResult"
+        parties:
+          type: array
+          items:
+            $ref: "#/components/schemas/PartyResult"
+      required:
+        - officeCode
+        - officeName
+        - totalVotes
+        - validVotes
+        - nominalVotes
+        - legendVotes
+        - blankVotes
+        - nullVotes
+        - candidates
+        - parties
+
+    MunicipalityResult:
+      type: object
+      properties:
+        municipalityCode:
+          type: string
+          example: "13250"
+        municipalityName:
+          type: string
+          example: ARARIPE
+        year:
+          type: integer
+          example: 2022
+        round:
+          type: integer
+          example: 1
+        offices:
+          type: array
+          items:
+            $ref: "#/components/schemas/OfficeResult"
+      required:
+        - municipalityCode
+        - municipalityName
+        - year
+        - round
+        - offices
 
     ErrorResponse:
       type: object

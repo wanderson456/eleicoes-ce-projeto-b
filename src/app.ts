@@ -5,6 +5,7 @@ import { logger } from "./config/logger.js";
 import { createVoteRouter } from "./routes/vote-routes.js";
 import { errorHandler } from "./middlewares/error-handler.js";
 import { createSectionRouter } from "./routes/section-routes.js";
+import { createResultRouter } from "./routes/result-routes.js";
 import {
   metricsHandler,
   recordHttpMetric
@@ -64,6 +65,7 @@ export function createApp(database: Pool) {
 
   app.use("/municipios", createVoteRouter(database));
   app.use("/municipios", createSectionRouter(database));
+  app.use("/municipios", createResultRouter(database));
 
   app.use(errorHandler);
 
