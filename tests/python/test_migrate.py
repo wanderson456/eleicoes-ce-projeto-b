@@ -14,7 +14,7 @@ class TestDatabaseUrl(unittest.TestCase):
         with patch.dict(os.environ, {}, clear=True):
             with self.assertRaisesRegex(
                 RuntimeError,
-                "DATABASE_URL n„o foi configurada."
+                "DATABASE_URL n√£o foi configurada."
             ):
                 migrate.database_url()
 
@@ -118,7 +118,7 @@ class TestDiscoverMigrations(unittest.TestCase):
         ):
             with self.assertRaisesRegex(
                 RuntimeError,
-                "Existem versıes duplicadas de migrations."
+                "Existem vers√µes duplicadas de migrations."
             ):
                 migrate.discover_migrations()
 
@@ -141,7 +141,7 @@ class TestRegisterBaseline(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "Arquivo da migration 002 n„o encontrado."
+            "Arquivo da migration 002 n√£o encontrado."
         ):
             migrate.register_baseline(connection, migrations)
 
@@ -151,7 +151,7 @@ class TestRegisterBaseline(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "schema_migrations j· possui registros."
+            "schema_migrations j√° possui registros."
         ):
             migrate.register_baseline(connection, self.migrations)
 
@@ -188,7 +188,7 @@ class TestApplyPendingMigrations(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "HistÛrico contÈm versıes sem arquivo SQL"
+            "Hist√≥rico cont√©m vers√µes sem arquivo SQL"
         ):
             migrate.apply_pending_migrations(connection, [])
 
@@ -349,7 +349,7 @@ class TestValidateExistingSchema(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "coluna votos.tipo_voto ausente ou incompatÌvel"
+            "coluna votos.tipo_voto ausente ou incompat√≠vel"
         ):
             migrate.validate_existing_schema(connection)
 
@@ -365,7 +365,7 @@ class TestValidateExistingSchema(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "RestriÁıes ausentes em candidatos"
+            "Restri√ß√µes ausentes em candidatos"
         ):
             migrate.validate_existing_schema(connection)
 
@@ -378,7 +378,7 @@ class TestValidateExistingSchema(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "Õndices ausentes"
+            "√çndices ausentes"
         ):
             migrate.validate_existing_schema(connection)
 

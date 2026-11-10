@@ -15,7 +15,7 @@ class TestDatabaseUrl(unittest.TestCase):
         with patch.dict(os.environ, {}, clear=True):
             with self.assertRaisesRegex(
                 RuntimeError,
-                "DATABASE_URL n„o foi configurada."
+                "DATABASE_URL n√£o foi configurada."
             ):
                 importer.database_url()
 
@@ -57,8 +57,8 @@ class TestLoadMunicipalities(unittest.TestCase):
 
     def valid_rows(self):
         return [
-            ("01001", "MunicÌpio A", "2300001", "MunicÌpio A"),
-            ("01002", "MunicÌpio B", "2300002", "MunicÌpio B"),
+            ("01001", "Munic√≠pio A", "2300001", "Munic√≠pio A"),
+            ("01002", "Munic√≠pio B", "2300002", "Munic√≠pio B"),
         ]
 
     def load_with_expected_count(self, expected_count=2):
@@ -100,13 +100,13 @@ class TestLoadMunicipalities(unittest.TestCase):
 
         with (
             patch.object(importer, "CSV_FILE", self.csv_file),
-            self.assertRaisesRegex(ValueError, "n„o possui cabeÁalho")
+            self.assertRaisesRegex(ValueError, "n√£o possui cabe√ßalho")
         ):
             importer.load_municipalities()
 
     def test_raises_when_required_columns_are_missing(self):
         self.write_csv(
-            [("01001", "MunicÌpio A")],
+            [("01001", "Munic√≠pio A")],
             headers=["CD_MUNICIPIO_TSE", "NM_MUNICIPIO_TSE"]
         )
 
@@ -118,8 +118,8 @@ class TestLoadMunicipalities(unittest.TestCase):
 
     def test_raises_when_field_is_empty(self):
         rows = [
-            ("01001", "", "2300001", "MunicÌpio A"),
-            ("01002", "MunicÌpio B", "2300002", "MunicÌpio B"),
+            ("01001", "", "2300001", "Munic√≠pio A"),
+            ("01002", "Munic√≠pio B", "2300002", "Munic√≠pio B"),
         ]
         self.write_csv(rows)
 
@@ -128,40 +128,40 @@ class TestLoadMunicipalities(unittest.TestCase):
 
     def test_raises_when_tse_code_is_invalid(self):
         rows = self.valid_rows()
-        rows[0] = ("123", "MunicÌpio A", "2300001", "MunicÌpio A")
+        rows[0] = ("123", "Munic√≠pio A", "2300001", "Munic√≠pio A")
         self.write_csv(rows)
 
-        with self.assertRaisesRegex(ValueError, "CÛdigo TSE inv·lido"):
+        with self.assertRaisesRegex(ValueError, "C√≥digo TSE inv√°lido"):
             self.load_with_expected_count()
 
     def test_raises_when_ibge_code_is_invalid(self):
         rows = self.valid_rows()
-        rows[0] = ("01001", "MunicÌpio A", "123", "MunicÌpio A")
+        rows[0] = ("01001", "Munic√≠pio A", "123", "Munic√≠pio A")
         self.write_csv(rows)
 
-        with self.assertRaisesRegex(ValueError, "CÛdigo IBGE inv·lido"):
+        with self.assertRaisesRegex(ValueError, "C√≥digo IBGE inv√°lido"):
             self.load_with_expected_count()
 
     def test_raises_when_municipality_count_is_incorrect(self):
         self.write_csv(self.valid_rows())
 
-        with self.assertRaisesRegex(ValueError, "Esperados 184 municÌpios"):
+        with self.assertRaisesRegex(ValueError, "Esperados 184 munic√≠pios"):
             self.load_with_expected_count(expected_count=184)
 
     def test_raises_when_tse_codes_are_duplicated(self):
         rows = self.valid_rows()
-        rows[1] = ("01001", "MunicÌpio B", "2300002", "MunicÌpio B")
+        rows[1] = ("01001", "Munic√≠pio B", "2300002", "Munic√≠pio B")
         self.write_csv(rows)
 
-        with self.assertRaisesRegex(ValueError, "cÛdigos TSE duplicados"):
+        with self.assertRaisesRegex(ValueError, "c√≥digos TSE duplicados"):
             self.load_with_expected_count()
 
     def test_raises_when_ibge_codes_are_duplicated(self):
         rows = self.valid_rows()
-        rows[1] = ("01002", "MunicÌpio B", "2300001", "MunicÌpio B")
+        rows[1] = ("01002", "Munic√≠pio B", "2300001", "Munic√≠pio B")
         self.write_csv(rows)
 
-        with self.assertRaisesRegex(ValueError, "cÛdigos IBGE duplicados"):
+        with self.assertRaisesRegex(ValueError, "c√≥digos IBGE duplicados"):
             self.load_with_expected_count()
 
 
@@ -170,7 +170,7 @@ class TestImportMunicipalities(unittest.TestCase):
 
     def setUp(self):
         self.municipalities = [
-            ("13030", "Acara˙", "2300200", "Acara˙"),
+            ("13030", "Acara√∫", "2300200", "Acara√∫"),
             ("13250", "Araripe", "2301307", "Araripe"),
         ]
 
@@ -209,7 +209,7 @@ class TestImportMunicipalities(unittest.TestCase):
     @patch.object(
         importer.psycopg,
         "connect",
-        side_effect=RuntimeError("Falha simulada na conex„o")
+        side_effect=RuntimeError("Falha simulada na conex√£o")
     )
     def test_propagates_database_connection_error(
         self, mock_connect, mock_load, mock_database_url
@@ -218,7 +218,7 @@ class TestImportMunicipalities(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            "Falha simulada na conex„o"
+            "Falha simulada na conex√£o"
         ):
             importer.import_municipalities()
 
