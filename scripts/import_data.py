@@ -1,11 +1,14 @@
 ﻿import argparse
 import csv
-import os
 from pathlib import Path
-from urllib.parse import urlsplit, urlunsplit
 
 import psycopg
 from dotenv import load_dotenv
+
+if __package__:
+    from .database import database_url as shared_database_url
+else:
+    from database import database_url as shared_database_url
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -136,25 +139,10 @@ INSERTS = {
 
 
 def database_url() -> str:
-    load_dotenv(ROOT / ".env")
-    url = os.getenv("DATABASE_URL")
-
-    if not url:
-        raise RuntimeError("DATABASE_URL não foi configurada.")
-
-    parsed = urlsplit(url)
-
-    # O importador roda no Windows, fora da rede interna do Compose.
-    port = os.getenv("TEST_DATABASE_PORT", "5433")
-
-    return urlunsplit((
-        parsed.scheme,
-        f"{parsed.username}:{parsed.password}@localhost:{port}",
-        parsed.path,
-        parsed.query,
-        parsed.fragment
-    ))
-
+    return shared_database_url(
+        ROOT / ".env",
+        load_env=load_dotenv,
+    )
 
 def convert_value(value, field, config):
     if value is None or value.strip() == "":

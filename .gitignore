@@ -13,3 +13,9 @@ data/raw/
 .venv/
 __pycache__/
 *.pyc
+# Dados geográficos TSE-IBGE
+dados/correspondencia-tse-ibge/*
+!dados/correspondencia-tse-ibge/ceara.csv
+
+# Arquivo original compactado
+municipio_tse_ibge.zip

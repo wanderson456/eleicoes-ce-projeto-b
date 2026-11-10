@@ -93,38 +93,64 @@ Resposta esperada:
 }
 ```
 
+
 ## 7. Preparação do banco de dados
 
-Aplique o schema inicial:
-
-```powershell
-Get-Content db\001_schema.sql -Raw | docker compose exec -T db psql -U eleicoes_app -d eleicoes_ce -v ON_ERROR_STOP=1
-```
-
-Aplique a classificação dos tipos de voto:
-
-```powershell
-Get-Content db\002_classificacao_votos.sql -Raw | docker compose exec -T db psql -U eleicoes_app -d eleicoes_ce -v ON_ERROR_STOP=1
-```
-
-Os scripts criam a estrutura necessária e classificam os registros entre votos nominais, de legenda, brancos e nulos.
-
-## 8. Importação dos dados
-
-Crie e ative um ambiente virtual Python:
+Com o PostgreSQL em execução pelo Docker Compose, configure o ambiente Python:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
-Instale as dependências:
+Execute o gerenciador de migrações:
+
+```powershell
+python scripts/migrate.py
+```
+
+O gerenciador identifica as migrações pendentes em `db/`, aplica cada arquivo SQL em uma transação e registra sua execução na tabela `schema_migrations`.
+
+**Bancos existentes:** se o banco já possuía as estruturas criadas pelas migrações `001` e `002`, utilize uma única vez:
+
+```powershell
+python scripts/migrate.py --baseline-existing
+```
+
+Essa opção valida o schema existente e registra as migrações iniciais no histórico, sem executá-las novamente.
+
+## 8. Importação dos dados
+
+### 8.1. Dependências Python
+
+Com o ambiente virtual ativado:
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-Importe a amostra utilizada no ambiente de testes:
+### 8.2. Importação da correspondência TSE–IBGE
+
+O projeto mantém a correspondência oficial entre os códigos municipais do TSE e do IBGE para os 184 municípios do Ceará.
+
+O arquivo utilizado é:
+
+`dados/correspondencia-tse-ibge/ceara.csv`
+
+Execute:
+
+```powershell
+python scripts/import_municipality_mapping.py
+```
+
+O script valida a quantidade de municípios, os códigos TSE e IBGE, os campos obrigatórios e a unicidade dos identificadores antes de importar os registros.
+
+A importação utiliza transação e `ON CONFLICT` para atualizar registros existentes, permitindo sua execução repetida sem duplicações.
+
+### 8.3. Importação dos dados eleitorais
+
+Para importar a base de amostra:
 
 ```powershell
 python scripts/import_data.py --mode sample
@@ -139,6 +165,7 @@ python scripts/import_data.py --mode full
 O modo `sample` utiliza os arquivos de `data/ci`. O modo `full` utiliza os arquivos de `data/raw`.
 
 A importação executa o carregamento em tabelas de staging e, em seguida, insere os registros nas tabelas definitivas.
+
 
 ## 9. Endpoints
 

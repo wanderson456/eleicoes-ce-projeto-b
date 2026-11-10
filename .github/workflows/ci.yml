@@ -50,14 +50,11 @@ jobs:
 
       - name: Instalar dependências Python
         run: pip install -r requirements.txt
+      - name: Executar testes Python
+        run: python -m unittest discover -s tests/python -v
 
-      - name: Aplicar schema do banco
-        run: |
-          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/001_schema.sql
-
-      - name: Aplicar classificação dos votos
-        run: |
-          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/002_classificacao_votos.sql
+      - name: Aplicar migrations
+        run: python scripts/migrate.py
 
       - name: Importar amostras eleitorais
         run: python scripts/import_data.py --mode sample
