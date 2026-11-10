@@ -20,13 +20,14 @@ export class PostgresSectionRepository implements SectionRepository {
   async findByMunicipality(
     criteria: SectionSearchCriteria
   ): Promise<PaginatedResult<SectionRecord>> {
-    const parameters = [criteria.municipalityCode];
+    const parameters = [criteria.municipalityCode, criteria.year];
 
     const countResult = await this.database.query<{ total: number }>(
       `
         SELECT COUNT(*)::int AS total
         FROM locais_votacao
         WHERE id_municipio_ibge = $1
+        AND ano = $2
       `,
       parameters
     );
@@ -44,9 +45,10 @@ export class PostgresSectionRepository implements SectionRepository {
           longitude
         FROM locais_votacao
         WHERE id_municipio_ibge = $1
+        AND ano = $2
         ORDER BY zona, secao
-        LIMIT $2
-        OFFSET $3
+        LIMIT $3
+        OFFSET $4
       `,
       [...parameters, criteria.limit, offset]
     );

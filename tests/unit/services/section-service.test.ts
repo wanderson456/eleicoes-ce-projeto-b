@@ -8,6 +8,7 @@ import {
 describe("SectionService", () => {
   const criteria = {
     municipalityCode: "2300200",
+    year: 2022,
     page: 1,
     limit: 20
   };
@@ -45,6 +46,9 @@ describe("SectionService", () => {
   it.each([
     ["municipalityCode", { municipalityCode: "230020" }],
     ["municipalityCode with letters", { municipalityCode: "23002AB" }],
+    ["year below minimum", { year: 999 }],
+    ["year above maximum", { year: 10000 }],
+    ["fractional year", { year: 2022.5 }],
     ["page", { page: 0 }],
     ["limit below minimum", { limit: 0 }],
     ["limit above maximum", { limit: 101 }],

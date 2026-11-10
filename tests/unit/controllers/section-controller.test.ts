@@ -9,6 +9,7 @@ import type { SectionService } from "../../../src/services/section-service.js";
 describe("SectionController", () => {
   const criteria = {
     municipalityCode: "2300200",
+    year: 2022,
     page: 1,
     limit: 20
   };
@@ -46,7 +47,11 @@ describe("SectionController", () => {
     const response = createResponse();
     const next = vi.fn() as NextFunction;
 
-    await controller(createRequest(), response, next);
+    await controller(
+      createRequest(undefined, { ano: "2022" }),
+      response,
+      next
+    );
 
     expect(findByMunicipality).toHaveBeenCalledWith(criteria);
     expect(response.status).toHaveBeenCalledWith(200);
@@ -62,6 +67,7 @@ describe("SectionController", () => {
 
     await controller(
       createRequest(undefined, {
+        ano: "2022",
         pagina: "2",
         limite: "10"
       }),
@@ -88,7 +94,10 @@ describe("SectionController", () => {
     const response = createResponse();
 
     await controller(
-      createRequest(undefined, { pagina: "abc" }),
+      createRequest(undefined, {
+        ano: "2022",
+        pagina: "abc"
+      }),
       response,
       vi.fn() as NextFunction
     );
@@ -98,6 +107,28 @@ describe("SectionController", () => {
       error: "Parâmetros inválidos",
       message: "Critérios inválidos."
     });
+  });
+
+    it("returns HTTP 400 when year is missing", async () => {
+    const findByMunicipality = vi.fn().mockRejectedValue(
+      new InvalidSectionSearchCriteriaError(
+        "O ano da eleição deve conter quatro dígitos."
+      )
+    );
+
+    const controller = createSectionController({
+      findByMunicipality
+    } as unknown as SectionService);
+
+    const response = createResponse();
+
+    await controller(createRequest(), response, vi.fn() as NextFunction);
+
+    expect(findByMunicipality).toHaveBeenCalledWith({
+      ...criteria,
+      year: 0
+    });
+    expect(response.status).toHaveBeenCalledWith(400);
   });
 
   it("forwards unexpected errors to Express", async () => {
@@ -110,7 +141,11 @@ describe("SectionController", () => {
 
     const next = vi.fn() as NextFunction;
 
-    await controller(createRequest(), createResponse(), next);
+    await controller(
+      createRequest(undefined, { ano: "2022" }),
+      createResponse(),
+      next
+    );
 
     expect(next).toHaveBeenCalledWith(error);
   });

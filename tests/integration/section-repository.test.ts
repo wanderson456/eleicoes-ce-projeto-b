@@ -59,15 +59,15 @@ beforeAll(async () => {
   );
 
   const fixtureCheck = await pool.query(
-  `SELECT id_municipio_ibge, zona, secao
+    `SELECT id_municipio_ibge, zona, secao
    FROM locais_votacao
    WHERE id_municipio_ibge = $1
      AND zona = $2
      AND secao = $3`,
-  [fixture.municipalityCode, fixture.zone, fixture.section]
-);
+    [fixture.municipalityCode, fixture.zone, fixture.section]
+  );
 
-console.log("Registro de teste inserido:", fixtureCheck.rows);
+  console.log("Registro de teste inserido:", fixtureCheck.rows);
 });
 
 afterAll(async () => {
@@ -94,6 +94,7 @@ describe("Integração: consulta de seções por município", () => {
   it("consulta as seções do município no PostgreSQL", async () => {
     const result = await repository.findByMunicipality({
       municipalityCode: fixture.municipalityCode,
+      year: fixture.year,
       page: 1,
       limit: 100
     });
@@ -115,6 +116,7 @@ describe("Integração: consulta de seções por município", () => {
   it("aplica a paginação na consulta", async () => {
     const result = await repository.findByMunicipality({
       municipalityCode: fixture.municipalityCode,
+      year: fixture.year,
       page: 2,
       limit: 10
     });
@@ -128,10 +130,10 @@ describe("Integração: consulta de seções por município", () => {
   it("retorna lista vazia para município inexistente", async () => {
     const result = await repository.findByMunicipality({
       municipalityCode: "9999998",
+      year: fixture.year,
       page: 1,
       limit: 20
     });
-
     expect(result.items).toEqual([]);
     expect(result.total).toBe(0);
     expect(result.totalPages).toBe(0);
@@ -139,7 +141,7 @@ describe("Integração: consulta de seções por município", () => {
 
   it("consulta as seções pela API HTTP", async () => {
     const response = await request(app)
-      .get("/municipios/9999999/secoes?pagina=1&limite=100")
+      .get("/municipios/9999999/secoes?ano=2022&pagina=1&limite=100")
       .expect(200);
 
     const section = response.body.items.find(

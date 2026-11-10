@@ -4,6 +4,7 @@ export type { PaginatedResult } from "./vote-repository.js";
 
 export interface SectionSearchCriteria {
   municipalityCode: string;
+  year: number;
   page: number;
   limit: number;
 }

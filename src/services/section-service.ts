@@ -15,7 +15,7 @@ export class InvalidSectionSearchCriteriaError extends Error {
 }
 
 export class SectionService {
-  constructor(private readonly sectionRepository: SectionRepository) {}
+  constructor(private readonly sectionRepository: SectionRepository) { }
 
   async findByMunicipality(
     criteria: SectionSearchCriteria
@@ -23,6 +23,16 @@ export class SectionService {
     if (!/^\d{7}$/.test(criteria.municipalityCode)) {
       throw new InvalidSectionSearchCriteriaError(
         "O código IBGE do município deve conter exatamente 7 dígitos."
+      );
+    }
+
+    if (
+      !Number.isInteger(criteria.year) ||
+      criteria.year < 1000 ||
+      criteria.year > 9999
+    ) {
+      throw new InvalidSectionSearchCriteriaError(
+        "O ano da eleição deve conter quatro dígitos."
       );
     }
 
@@ -43,5 +53,6 @@ export class SectionService {
     }
 
     return this.sectionRepository.findByMunicipality(criteria);
+
   }
 }

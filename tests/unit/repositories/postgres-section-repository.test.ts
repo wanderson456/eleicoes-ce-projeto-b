@@ -26,6 +26,7 @@ describe("PostgresSectionRepository", () => {
 
     const result = await repository.findByMunicipality({
       municipalityCode: "2300200",
+      year: 2022,
       page: 1,
       limit: 10
     });
@@ -39,7 +40,8 @@ describe("PostgresSectionRepository", () => {
     expect(query).toHaveBeenNthCalledWith(
       1,
       expect.stringContaining("COUNT(*)"),
-      ["2300200"]
+      ["2300200", 2022]
+
     );
   });
 
@@ -52,6 +54,7 @@ describe("PostgresSectionRepository", () => {
 
     const result = await repository.findByMunicipality({
       municipalityCode: "2300200",
+      year: 2022,
       page: 2,
       limit: 20
     });
@@ -61,8 +64,8 @@ describe("PostgresSectionRepository", () => {
 
     expect(query).toHaveBeenNthCalledWith(
       2,
-      expect.stringContaining("OFFSET $3"),
-      ["2300200", 20, 20]
+      expect.stringContaining("OFFSET $4"),
+      ["2300200", 2022, 20, 20]
     );
   });
 
@@ -81,8 +84,9 @@ describe("PostgresSectionRepository", () => {
 
     const result = await repository.findByMunicipality({
       municipalityCode: "2300200",
+      year: 2022,
       page: 1,
-      limit: 20
+      limit: 10
     });
 
     expect(result.items[0]?.latitude).toBeNull();
@@ -98,6 +102,7 @@ describe("PostgresSectionRepository", () => {
 
     const result = await repository.findByMunicipality({
       municipalityCode: "9999999",
+      year: 2022,
       page: 1,
       limit: 20
     });

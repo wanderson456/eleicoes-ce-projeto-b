@@ -30,6 +30,7 @@ export function createSectionController(
           typeof request.params.codigo === "string"
             ? request.params.codigo
             : "",
+        year: parseInteger(request.query.ano, 0),
         page: parseInteger(request.query.pagina, 1),
         limit: parseInteger(request.query.limite, 20)
       });
