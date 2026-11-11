@@ -109,7 +109,7 @@ describe("SectionController", () => {
     });
   });
 
-    it("returns HTTP 400 when year is missing", async () => {
+  it("returns HTTP 400 when year is missing", async () => {
     const findByMunicipality = vi.fn().mockRejectedValue(
       new InvalidSectionSearchCriteriaError(
         "O ano da eleição deve conter quatro dígitos."

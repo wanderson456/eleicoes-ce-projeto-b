@@ -1,4 +1,4 @@
-
+﻿
 import { describe, expect, it, vi } from "vitest";
 import type { CandidateRepository } from "../../../src/domain/candidate-repository.js";
 import {
@@ -25,7 +25,7 @@ describe("CandidateService", () => {
                 officeName: "DEPUTADO ESTADUAL",
                 partyNumber: 12,
                 partyAbbreviation: "PDT",
-                partyName: "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                partyName: "PARTIDO DEMOCRÃTICO TRABALHISTA",
                 totalVotes: 72183
             }
         ],
@@ -47,6 +47,8 @@ describe("CandidateService", () => {
             findAll
         };
     }
+
+
 
     it("delegates a valid search to the repository", async () => {
         const { service, findAll } = createService();

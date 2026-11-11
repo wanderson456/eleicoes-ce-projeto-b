@@ -1,12 +1,15 @@
 ﻿import express from "express";
 import type { Pool } from "pg";
 import { pinoHttp } from "pino-http";
+import cors from "cors";
 import { logger } from "./config/logger.js";
 import { createVoteRouter } from "./routes/vote-routes.js";
 import { errorHandler } from "./middlewares/error-handler.js";
 import { createSectionRouter } from "./routes/section-routes.js";
 import { createResultRouter } from "./routes/result-routes.js";
 import { createCandidateRouter } from "./routes/candidate-routes.js";
+import { createMunicipalityRouter } from "./routes/municipality-routes.js";
+
 import {
   metricsHandler,
   recordHttpMetric
@@ -14,6 +17,10 @@ import {
 
 export function createApp(database: Pool) {
   const app = express();
+
+  app.use(cors({
+    origin: process.env.CORS_ORIGIN ?? "http://localhost:5173"
+  }));
 
   app.use(pinoHttp({
     logger,
@@ -64,6 +71,7 @@ export function createApp(database: Pool) {
 
   app.get("/metrics", metricsHandler);
 
+  app.use("/municipios", createMunicipalityRouter(database));
   app.use("/municipios", createVoteRouter(database));
   app.use("/municipios", createSectionRouter(database));
   app.use("/municipios", createResultRouter(database));
