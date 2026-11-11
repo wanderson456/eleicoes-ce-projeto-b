@@ -1,4 +1,5 @@
-﻿import { describe, expect, it, vi } from "vitest";
+﻿
+import { describe, expect, it, vi } from "vitest";
 import type { Request, Response, NextFunction } from "express";
 import { createSectionController } from "../../../src/controllers/section-controller.js";
 import {
@@ -9,7 +10,9 @@ import type { SectionService } from "../../../src/services/section-service.js";
 describe("SectionController", () => {
   const criteria = {
     municipalityCode: "2300200",
+    sqCandidato: "60001633582",
     year: 2022,
+    round: 1,
     page: 1,
     limit: 20
   };
@@ -48,7 +51,11 @@ describe("SectionController", () => {
     const next = vi.fn() as NextFunction;
 
     await controller(
-      createRequest(undefined, { ano: "2022" }),
+      createRequest(undefined, {
+        ano: "2022",
+        sqCandidato: "60001633582",
+        turno: "1"
+      }),
       response,
       next
     );
@@ -68,6 +75,8 @@ describe("SectionController", () => {
     await controller(
       createRequest(undefined, {
         ano: "2022",
+        sqCandidato: "60001633582",
+        turno: "1",
         pagina: "2",
         limite: "10"
       }),
@@ -96,6 +105,8 @@ describe("SectionController", () => {
     await controller(
       createRequest(undefined, {
         ano: "2022",
+        sqCandidato: "60001633582",
+        turno: "1",
         pagina: "abc"
       }),
       response,
@@ -122,7 +133,14 @@ describe("SectionController", () => {
 
     const response = createResponse();
 
-    await controller(createRequest(), response, vi.fn() as NextFunction);
+    await controller(
+      createRequest(undefined, {
+        sqCandidato: "60001633582",
+        turno: "1"
+      }),
+      response,
+      vi.fn() as NextFunction
+    );
 
     expect(findByMunicipality).toHaveBeenCalledWith({
       ...criteria,
@@ -142,7 +160,11 @@ describe("SectionController", () => {
     const next = vi.fn() as NextFunction;
 
     await controller(
-      createRequest(undefined, { ano: "2022" }),
+      createRequest(undefined, {
+        ano: "2022",
+        sqCandidato: "60001633582",
+        turno: "1"
+      }),
       createResponse(),
       next
     );

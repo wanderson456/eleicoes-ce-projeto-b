@@ -26,14 +26,19 @@ export function createSectionController(
   ): Promise<void> => {
     try {
       const result = await sectionService.findByMunicipality({
-        municipalityCode:
-          typeof request.params.codigo === "string"
-            ? request.params.codigo
-            : "",
-        year: parseInteger(request.query.ano, 0),
-        page: parseInteger(request.query.pagina, 1),
-        limit: parseInteger(request.query.limite, 20)
-      });
+      municipalityCode:
+        typeof request.params.codigo === "string"
+        ? request.params.codigo
+        : "",
+      sqCandidato:
+       typeof request.query.sqCandidato === "string"
+        ? request.query.sqCandidato
+      : "",
+       year: parseInteger(request.query.ano, 0),
+      round: parseInteger(request.query.turno, 0),
+      page: parseInteger(request.query.pagina, 1),
+      limit: parseInteger(request.query.limite, 20)
+    });
 
       response.status(200).json(result);
     } catch (error) {

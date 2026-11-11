@@ -1,3 +1,4 @@
+
 import "dotenv/config";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { Pool } from "pg";
@@ -25,6 +26,8 @@ const app = createApp(pool);
 const fixture = {
   year: 2022,
   municipalityCode: "9999999",
+  sqCandidato: "60001633582",
+  round: 1,
   zone: 999,
   section: 999
 };
@@ -57,17 +60,6 @@ beforeAll(async () => {
       fixture.section
     ]
   );
-
-  const fixtureCheck = await pool.query(
-    `SELECT id_municipio_ibge, zona, secao
-   FROM locais_votacao
-   WHERE id_municipio_ibge = $1
-     AND zona = $2
-     AND secao = $3`,
-    [fixture.municipalityCode, fixture.zone, fixture.section]
-  );
-
-  console.log("Registro de teste inserido:", fixtureCheck.rows);
 });
 
 afterAll(async () => {
@@ -94,12 +86,12 @@ describe("Integração: consulta de seções por município", () => {
   it("consulta as seções do município no PostgreSQL", async () => {
     const result = await repository.findByMunicipality({
       municipalityCode: fixture.municipalityCode,
+      sqCandidato: fixture.sqCandidato,
       year: fixture.year,
+      round: fixture.round,
       page: 1,
       limit: 100
     });
-
-
 
     const section = result.items.find(
       (item) =>
@@ -110,13 +102,16 @@ describe("Integração: consulta de seções por município", () => {
     expect(section).toBeDefined();
     expect(section?.latitude).toBe(-3.745);
     expect(section?.longitude).toBe(-38.52);
+    expect(section?.votes).toBe(0);
     expect(result.total).toBeGreaterThan(0);
   });
 
   it("aplica a paginação na consulta", async () => {
     const result = await repository.findByMunicipality({
       municipalityCode: fixture.municipalityCode,
+      sqCandidato: fixture.sqCandidato,
       year: fixture.year,
+      round: fixture.round,
       page: 2,
       limit: 10
     });
@@ -130,10 +125,13 @@ describe("Integração: consulta de seções por município", () => {
   it("retorna lista vazia para município inexistente", async () => {
     const result = await repository.findByMunicipality({
       municipalityCode: "9999998",
+      sqCandidato: fixture.sqCandidato,
       year: fixture.year,
+      round: fixture.round,
       page: 1,
       limit: 20
     });
+
     expect(result.items).toEqual([]);
     expect(result.total).toBe(0);
     expect(result.totalPages).toBe(0);
@@ -141,7 +139,9 @@ describe("Integração: consulta de seções por município", () => {
 
   it("consulta as seções pela API HTTP", async () => {
     const response = await request(app)
-      .get("/municipios/9999999/secoes?ano=2022&pagina=1&limite=100")
+      .get(
+        `/municipios/${fixture.municipalityCode}/secoes?ano=${fixture.year}&turno=${fixture.round}&sqCandidato=${fixture.sqCandidato}&pagina=1&limite=100`
+      )
       .expect(200);
 
     const section = response.body.items.find(
@@ -151,6 +151,7 @@ describe("Integração: consulta de seções por município", () => {
     );
 
     expect(section).toBeDefined();
+    expect(section.votes).toBe(0);
     expect(response.body.total).toBeGreaterThan(0);
     expect(response.body.page).toBe(1);
     expect(response.body.limit).toBe(100);

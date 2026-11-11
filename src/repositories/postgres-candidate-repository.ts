@@ -80,6 +80,7 @@ export class PostgresCandidateRepository
 
         const result = await this.database.query<{
             id: string;
+            sq_candidato: string;
             candidate_number: string | null;
             candidate_name: string;
             ballot_name: string | null;
@@ -93,6 +94,7 @@ export class PostgresCandidateRepository
             `
                 SELECT
                     c.id,
+                    c.sq_candidato,
                     c.nr_candidato AS candidate_number,
                     c.nm_candidato AS candidate_name,
                     c.nm_urna_candidato AS ballot_name,
@@ -149,6 +151,7 @@ export class PostgresCandidateRepository
 
             return {
                 id,
+                sqCandidato: row.sq_candidato,
                 candidateNumber: row.candidate_number,
                 candidateName: row.candidate_name,
                 ballotName: row.ballot_name,

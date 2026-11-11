@@ -11,6 +11,7 @@ export interface CandidateSearchCriteria {
 
 export interface CandidateRecord {
   id: number;
+  sqCandidato: string;
   candidateNumber: string | null;
   candidateName: string;
   ballotName: string | null;
