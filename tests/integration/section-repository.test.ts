@@ -25,15 +25,14 @@ const app = createApp(pool);
 
 const fixture = {
   year: 2022,
-  municipalityCode: "2301307",
-  municipalityTseCode: "13250",
+  municipalityCode: "9999998",
+  municipalityTseCode: "77777",
   candidateId: "60001633582",
   round: 1,
   zone: 999,
   sectionWithLocal: 999,
   sectionWithoutLocal: 998
 };
-
 async function cleanFixture() {
   await pool.query(
     `DELETE FROM votos
@@ -68,10 +67,32 @@ async function cleanFixture() {
       fixture.sectionWithoutLocal
     ]
   );
+    await pool.query(
+    `DELETE FROM municipios_tse_ibge
+     WHERE cd_municipio_tse = $1
+       AND cd_municipio_ibge = $2`,
+    [
+      fixture.municipalityTseCode,
+      fixture.municipalityCode
+    ]
+  );
 }
 
 beforeAll(async () => {
   await cleanFixture();
+    await pool.query(
+    `INSERT INTO municipios_tse_ibge (
+      cd_municipio_tse,
+      nm_municipio_tse,
+      cd_municipio_ibge,
+      nm_municipio_ibge
+    )
+    VALUES ($1, 'MUNICIPIO TESTE', $2, 'MUNICIPIO TESTE')`,
+    [
+      fixture.municipalityTseCode,
+      fixture.municipalityCode
+    ]
+  );
 
   await pool.query(
     `INSERT INTO locais_votacao (
@@ -218,7 +239,7 @@ describe("Integração: consulta de seções por município", () => {
 
   it("retorna lista vazia para município inexistente", async () => {
     const result = await repository.findByMunicipality({
-      municipalityCode: "9999998",
+      municipalityCode: "9999997",
       sqCandidato: fixture.candidateId,
       year: fixture.year,
       round: fixture.round,
