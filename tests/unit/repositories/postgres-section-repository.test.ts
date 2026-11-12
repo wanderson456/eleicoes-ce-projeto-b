@@ -19,7 +19,10 @@ describe("PostgresSectionRepository", () => {
     section: 165,
     latitude: "-3.745000000",
     longitude: "-38.520000000",
-    votes: "237"
+    votes: "237",
+    pollingPlaceNumber: 1015,
+    pollingPlaceName: "ESCOLA MUNICIPAL",
+    pollingPlaceAddress: "RUA PRINCIPAL, 100"
   };
 
   function createRepository(query: ReturnType<typeof vi.fn>) {
@@ -40,9 +43,16 @@ describe("PostgresSectionRepository", () => {
     expect(result.total).toBe(25);
     expect(result.totalPages).toBe(3);
     expect(result.items).toHaveLength(1);
+
     expect(result.items[0]?.latitude).toBe(-3.745);
     expect(result.items[0]?.longitude).toBe(-38.52);
     expect(result.items[0]?.votes).toBe(237);
+
+    expect(result.items[0]?.pollingPlaceNumber).toBe(1015);
+    expect(result.items[0]?.pollingPlaceName).toBe("ESCOLA MUNICIPAL");
+    expect(result.items[0]?.pollingPlaceAddress).toBe(
+      "RUA PRINCIPAL, 100"
+    );
 
     expect(query).toHaveBeenNthCalledWith(
       1,
@@ -54,6 +64,12 @@ describe("PostgresSectionRepository", () => {
       2,
       expect.stringContaining("sq_candidato = $4"),
       ["2300200", 2022, 1, "60001633582", 10, 0]
+    );
+
+    expect(query.mock.calls[1]?.[0]).toContain("identificacao_locais");
+    expect(query.mock.calls[1]?.[0]).toContain("nm_local_votacao");
+    expect(query.mock.calls[1]?.[0]).toContain(
+      "ds_local_votacao_endereco"
     );
   });
 
@@ -98,6 +114,27 @@ describe("PostgresSectionRepository", () => {
     expect(result.items[0]?.latitude).toBeNull();
     expect(result.items[0]?.longitude).toBeNull();
     expect(result.items[0]?.votes).toBe(237);
+  });
+
+  it("preserves null polling place information", async () => {
+    const query = vi.fn()
+      .mockResolvedValueOnce({ rows: [{ total: 1 }] })
+      .mockResolvedValueOnce({
+        rows: [{
+          ...sectionRow,
+          pollingPlaceNumber: null,
+          pollingPlaceName: null,
+          pollingPlaceAddress: null
+        }]
+      });
+
+    const repository = createRepository(query);
+
+    const result = await repository.findByMunicipality(criteria);
+
+    expect(result.items[0]?.pollingPlaceNumber).toBeNull();
+    expect(result.items[0]?.pollingPlaceName).toBeNull();
+    expect(result.items[0]?.pollingPlaceAddress).toBeNull();
   });
 
   it("preserves sections with zero votes", async () => {

@@ -14,6 +14,9 @@ type SectionRow = {
   latitude: number | string | null;
   longitude: number | string | null;
   votes: number | string;
+  pollingPlaceNumber: number | string | null;
+  pollingPlaceName: string | null;
+  pollingPlaceAddress: string | null;
 };
 
 export class PostgresSectionRepository implements SectionRepository {
@@ -67,6 +70,22 @@ export class PostgresSectionRepository implements SectionRepository {
             zona,
             secao
         ),
+        identificacao_locais AS (
+          SELECT
+            cd_municipio_tse,
+            zona,
+            secao,
+            MAX(nr_local_votacao) AS "pollingPlaceNumber",
+            MAX(nm_local_votacao) AS "pollingPlaceName",
+            MAX(ds_local_votacao_endereco) AS "pollingPlaceAddress"
+          FROM votos
+          WHERE ano_eleicao = $2
+            AND turno = $3
+          GROUP BY
+            cd_municipio_tse,
+            zona,
+            secao
+        ),
         votos_candidato AS (
           SELECT
             cd_municipio_tse,
@@ -89,10 +108,17 @@ export class PostgresSectionRepository implements SectionRepository {
           s.secao AS section,
           s.latitude,
           s.longitude,
-          COALESCE(vc.votes, 0)::bigint AS votes
+          COALESCE(vc.votes, 0)::bigint AS votes,
+          il."pollingPlaceNumber",
+          il."pollingPlaceName",
+          il."pollingPlaceAddress"
         FROM secoes s
         LEFT JOIN municipios_tse_ibge m
           ON m.cd_municipio_ibge = s.id_municipio_ibge
+        LEFT JOIN identificacao_locais il
+          ON il.cd_municipio_tse = m.cd_municipio_tse
+          AND il.zona = s.zona
+          AND il.secao = s.secao
         LEFT JOIN votos_candidato vc
           ON vc.cd_municipio_tse = m.cd_municipio_tse
           AND vc.zona = s.zona
@@ -121,7 +147,13 @@ export class PostgresSectionRepository implements SectionRepository {
           row.latitude === null ? null : Number(row.latitude),
         longitude:
           row.longitude === null ? null : Number(row.longitude),
-        votes
+        votes,
+        pollingPlaceNumber:
+          row.pollingPlaceNumber === null
+            ? null
+            : Number(row.pollingPlaceNumber),
+        pollingPlaceName: row.pollingPlaceName,
+        pollingPlaceAddress: row.pollingPlaceAddress
       };
     });
 

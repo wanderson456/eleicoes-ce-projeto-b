@@ -19,6 +19,9 @@ export interface SectionRecord {
   latitude: number | null;
   longitude: number | null;
   votes: number;
+  pollingPlaceNumber: number | null;
+  pollingPlaceName: string | null;
+  pollingPlaceAddress: string | null;
 }
 
 export interface SectionRepository {
