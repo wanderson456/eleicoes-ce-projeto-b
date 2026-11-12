@@ -15,6 +15,7 @@ describe("PostgresSectionRepository", () => {
 
   const sectionRow = {
     municipalityCode: "2300200",
+    municipalityTseCode: "77777",
     zone: 30,
     section: 165,
     latitude: "-3.745000000",
@@ -43,6 +44,7 @@ describe("PostgresSectionRepository", () => {
     expect(result.total).toBe(25);
     expect(result.totalPages).toBe(3);
     expect(result.items).toHaveLength(1);
+    expect(result.items[0]?.municipalityTseCode).toBe("77777");
 
     expect(result.items[0]?.latitude).toBe(-3.745);
     expect(result.items[0]?.longitude).toBe(-38.52);
@@ -62,7 +64,9 @@ describe("PostgresSectionRepository", () => {
 
     expect(query).toHaveBeenNthCalledWith(
       2,
-      expect.stringContaining("sq_candidato = $4"),
+      expect.stringContaining(
+        "$4::bigint IS NULL OR sq_candidato = $4::bigint"
+      ),
       ["2300200", 2022, 1, "60001633582", 10, 0]
     );
 

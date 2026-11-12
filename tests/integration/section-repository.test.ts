@@ -67,7 +67,7 @@ async function cleanFixture() {
       fixture.sectionWithoutLocal
     ]
   );
-    await pool.query(
+  await pool.query(
     `DELETE FROM municipios_tse_ibge
      WHERE cd_municipio_tse = $1
        AND cd_municipio_ibge = $2`,
@@ -80,7 +80,7 @@ async function cleanFixture() {
 
 beforeAll(async () => {
   await cleanFixture();
-    await pool.query(
+  await pool.query(
     `INSERT INTO municipios_tse_ibge (
       cd_municipio_tse,
       nm_municipio_tse,
@@ -183,6 +183,10 @@ describe("Integração: consulta de seções por município", () => {
     );
 
     expect(section).toBeDefined();
+    expect(section?.municipalityCode).toBe(fixture.municipalityCode);
+    expect(section?.municipalityTseCode).toBe(
+      fixture.municipalityTseCode
+    );
     expect(section?.latitude).toBe(-3.745);
     expect(section?.longitude).toBe(-38.52);
     expect(section?.votes).toBe(7);
@@ -235,6 +239,28 @@ describe("Integração: consulta de seções por município", () => {
     expect(result.limit).toBe(10);
     expect(result.totalPages).toBeGreaterThan(0);
     expect(result.items.length).toBeLessThanOrEqual(10);
+  });
+
+  it("consulta seções sem informar candidato", async () => {
+    const result = await repository.findByMunicipality({
+      municipalityCode: fixture.municipalityCode,
+      sqCandidato: "",
+      year: fixture.year,
+      round: fixture.round,
+      page: 1,
+      limit: 100
+    });
+
+    const section = result.items.find(
+      (item) =>
+        item.zone === fixture.zone &&
+        item.section === fixture.sectionWithLocal
+    );
+
+    expect(section).toBeDefined();
+    expect(section?.municipalityTseCode).toBe(
+      fixture.municipalityTseCode
+    );
   });
 
   it("retorna lista vazia para município inexistente", async () => {

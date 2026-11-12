@@ -17,10 +17,11 @@ type SectionRow = {
   pollingPlaceNumber: number | string | null;
   pollingPlaceName: string | null;
   pollingPlaceAddress: string | null;
+  municipalityTseCode: string | null;
 };
 
 export class PostgresSectionRepository implements SectionRepository {
-  constructor(private readonly database: Pool) {}
+  constructor(private readonly database: Pool) { }
 
   async findByMunicipality(
     criteria: SectionSearchCriteria
@@ -29,7 +30,9 @@ export class PostgresSectionRepository implements SectionRepository {
       criteria.municipalityCode,
       criteria.year,
       criteria.round,
-      criteria.sqCandidato
+      criteria.sqCandidato.trim() === ""
+        ? null
+        : criteria.sqCandidato
     ];
 
     const countResult = await this.database.query<{ total: number }>(
@@ -95,7 +98,7 @@ export class PostgresSectionRepository implements SectionRepository {
           FROM votos
           WHERE ano_eleicao = $2
             AND turno = $3
-            AND sq_candidato = $4
+            AND ($4::bigint IS NULL OR sq_candidato = $4::bigint)
             AND tipo_voto = 'NOMINAL'
           GROUP BY
             cd_municipio_tse,
@@ -104,6 +107,7 @@ export class PostgresSectionRepository implements SectionRepository {
         )
         SELECT
           s.id_municipio_ibge AS "municipalityCode",
+          m.cd_municipio_tse AS "municipalityTseCode",
           s.zona AS zone,
           s.secao AS section,
           s.latitude,
@@ -138,9 +142,9 @@ export class PostgresSectionRepository implements SectionRepository {
           "Quantidade de votos excede o limite seguro de inteiros."
         );
       }
-
       return {
         municipalityCode: row.municipalityCode,
+        municipalityTseCode: row.municipalityTseCode,
         zone: row.zone,
         section: row.section,
         latitude:

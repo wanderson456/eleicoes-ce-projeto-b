@@ -14,6 +14,7 @@ export interface SectionSearchCriteria {
 
 export interface SectionRecord {
   municipalityCode: string;
+  municipalityTseCode: string | null;
   zone: number;
   section: number;
   latitude: number | null;

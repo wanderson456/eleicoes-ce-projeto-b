@@ -1,0 +1,2918 @@
+﻿{
+    "municipalityCode":  "13250",
+    "municipalityName":  "ARARIPE",
+    "year":  2022,
+    "round":  1,
+    "offices":  [
+                    {
+                        "officeCode":  3,
+                        "officeName":  "Governador",
+                        "totalVotes":  13178,
+                        "validVotes":  12367,
+                        "nominalVotes":  12367,
+                        "legendVotes":  0,
+                        "blankVotes":  290,
+                        "nullVotes":  521,
+                        "candidates":  [
+                                           {
+                                               "candidateId":  60001633585,
+                                               "candidateNumber":  "13",
+                                               "candidateName":  "ELMANO DE FREITAS",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  10674,
+                                               "percentage":  86.31
+                                           },
+                                           {
+                                               "candidateId":  60001608845,
+                                               "candidateNumber":  "44",
+                                               "candidateName":  "CAPITÃO WAGNER",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  887,
+                                               "percentage":  7.17
+                                           },
+                                           {
+                                               "candidateId":  60001612926,
+                                               "candidateNumber":  "12",
+                                               "candidateName":  "ROBERTO CLÁUDIO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  801,
+                                               "percentage":  6.48
+                                           },
+                                           {
+                                               "candidateId":  60001692640,
+                                               "candidateNumber":  "21",
+                                               "candidateName":  "CHICO MALTA",
+                                               "partyNumber":  21,
+                                               "partyAbbreviation":  "PCB",
+                                               "partyName":  "PARTIDO COMUNISTA BRASILEIRO",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001608950,
+                                               "candidateNumber":  "16",
+                                               "candidateName":  "ZÉ BATISTA",
+                                               "partyNumber":  16,
+                                               "partyAbbreviation":  "PSTU",
+                                               "partyName":  "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           }
+                                       ],
+                        "parties":  [
+                                        {
+                                            "partyNumber":  12,
+                                            "partyAbbreviation":  "PDT",
+                                            "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                            "nominalVotes":  801,
+                                            "legendVotes":  0,
+                                            "totalVotes":  801,
+                                            "percentage":  6.48
+                                        },
+                                        {
+                                            "partyNumber":  13,
+                                            "partyAbbreviation":  "PT",
+                                            "partyName":  "PARTIDO DOS TRABALHADORES",
+                                            "nominalVotes":  10674,
+                                            "legendVotes":  0,
+                                            "totalVotes":  10674,
+                                            "percentage":  86.31
+                                        },
+                                        {
+                                            "partyNumber":  16,
+                                            "partyAbbreviation":  "PSTU",
+                                            "partyName":  "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO",
+                                            "nominalVotes":  1,
+                                            "legendVotes":  0,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        },
+                                        {
+                                            "partyNumber":  21,
+                                            "partyAbbreviation":  "PCB",
+                                            "partyName":  "PARTIDO COMUNISTA BRASILEIRO",
+                                            "nominalVotes":  4,
+                                            "legendVotes":  0,
+                                            "totalVotes":  4,
+                                            "percentage":  0.03
+                                        },
+                                        {
+                                            "partyNumber":  44,
+                                            "partyAbbreviation":  "UNIÃO",
+                                            "partyName":  "UNIÃO BRASIL",
+                                            "nominalVotes":  887,
+                                            "legendVotes":  0,
+                                            "totalVotes":  887,
+                                            "percentage":  7.17
+                                        }
+                                    ]
+                    },
+                    {
+                        "officeCode":  5,
+                        "officeName":  "Senador",
+                        "totalVotes":  13178,
+                        "validVotes":  11735,
+                        "nominalVotes":  11735,
+                        "legendVotes":  0,
+                        "blankVotes":  386,
+                        "nullVotes":  1057,
+                        "candidates":  [
+                                           {
+                                               "candidateId":  60001633582,
+                                               "candidateNumber":  "131",
+                                               "candidateName":  "CAMILO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  11032,
+                                               "percentage":  94.01
+                                           },
+                                           {
+                                               "candidateId":  60001633970,
+                                               "candidateNumber":  "700",
+                                               "candidateName":  "KAMILA CARDOSO",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  553,
+                                               "percentage":  4.71
+                                           },
+                                           {
+                                               "candidateId":  60001731829,
+                                               "candidateNumber":  "555",
+                                               "candidateName":  "ERIKA AMORIM",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  147,
+                                               "percentage":  1.25
+                                           },
+                                           {
+                                               "candidateId":  60001608997,
+                                               "candidateNumber":  "160",
+                                               "candidateName":  "CARLOS SILVA",
+                                               "partyNumber":  16,
+                                               "partyAbbreviation":  "PSTU",
+                                               "partyName":  "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO",
+                                               "votes":  3,
+                                               "percentage":  0.03
+                                           }
+                                       ],
+                        "parties":  [
+                                        {
+                                            "partyNumber":  13,
+                                            "partyAbbreviation":  "PT",
+                                            "partyName":  "PARTIDO DOS TRABALHADORES",
+                                            "nominalVotes":  11032,
+                                            "legendVotes":  0,
+                                            "totalVotes":  11032,
+                                            "percentage":  94.01
+                                        },
+                                        {
+                                            "partyNumber":  16,
+                                            "partyAbbreviation":  "PSTU",
+                                            "partyName":  "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO",
+                                            "nominalVotes":  3,
+                                            "legendVotes":  0,
+                                            "totalVotes":  3,
+                                            "percentage":  0.03
+                                        },
+                                        {
+                                            "partyNumber":  55,
+                                            "partyAbbreviation":  "PSD",
+                                            "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                            "nominalVotes":  147,
+                                            "legendVotes":  0,
+                                            "totalVotes":  147,
+                                            "percentage":  1.25
+                                        },
+                                        {
+                                            "partyNumber":  70,
+                                            "partyAbbreviation":  "AVANTE",
+                                            "partyName":  "AVANTE",
+                                            "nominalVotes":  553,
+                                            "legendVotes":  0,
+                                            "totalVotes":  553,
+                                            "percentage":  4.71
+                                        }
+                                    ]
+                    },
+                    {
+                        "officeCode":  6,
+                        "officeName":  "Deputado Federal",
+                        "totalVotes":  13178,
+                        "validVotes":  12495,
+                        "nominalVotes":  11918,
+                        "legendVotes":  577,
+                        "blankVotes":  446,
+                        "nullVotes":  237,
+                        "candidates":  [
+                                           {
+                                               "candidateId":  60001643110,
+                                               "candidateNumber":  "1533",
+                                               "candidateName":  "EUNÍCIO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  3448,
+                                               "percentage":  27.6
+                                           },
+                                           {
+                                               "candidateId":  60001619124,
+                                               "candidateNumber":  "1322",
+                                               "candidateName":  "GUIMARÃES DO PT",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1492,
+                                               "percentage":  11.94
+                                           },
+                                           {
+                                               "candidateId":  60001603469,
+                                               "candidateNumber":  "1213",
+                                               "candidateName":  "IDILVAN",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  1205,
+                                               "percentage":  9.64
+                                           },
+                                           {
+                                               "candidateId":  60001614155,
+                                               "candidateNumber":  "2211",
+                                               "candidateName":  "YURY DO PAREDÃO",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1090,
+                                               "percentage":  8.72
+                                           },
+                                           {
+                                               "candidateId":  60001608882,
+                                               "candidateNumber":  "4477",
+                                               "candidateName":  "FERNANDA PESSOA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  980,
+                                               "percentage":  7.84
+                                           },
+                                           {
+                                               "candidateId":  60001603484,
+                                               "candidateNumber":  "1234",
+                                               "candidateName":  "ANDRÉ FIGUEIREDO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  771,
+                                               "percentage":  6.17
+                                           },
+                                           {
+                                               "candidateId":  60001608894,
+                                               "candidateNumber":  "4488",
+                                               "candidateName":  "MOSES RODRIGUES",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  638,
+                                               "percentage":  5.11
+                                           },
+                                           {
+                                               "candidateId":  60001608853,
+                                               "candidateNumber":  "1010",
+                                               "candidateName":  "RONALDO MARTINS",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  614,
+                                               "percentage":  4.91
+                                           },
+                                           {
+                                               "candidateId":  60001603454,
+                                               "candidateNumber":  "4000",
+                                               "candidateName":  "DENIS BEZERRA",
+                                               "partyNumber":  40,
+                                               "partyAbbreviation":  "PSB",
+                                               "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                               "votes":  256,
+                                               "percentage":  2.05
+                                           },
+                                           {
+                                               "candidateId":  60001601188,
+                                               "candidateNumber":  "5533",
+                                               "candidateName":  "LUIZ GASTÃO",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  244,
+                                               "percentage":  1.95
+                                           },
+                                           {
+                                               "candidateId":  60001614161,
+                                               "candidateNumber":  "2222",
+                                               "candidateName":  "ANDRÉ FERNANDES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  188,
+                                               "percentage":  1.5
+                                           },
+                                           {
+                                               "candidateId":  60001603485,
+                                               "candidateNumber":  "1233",
+                                               "candidateName":  "ROBÉRIO MONTEIRO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  149,
+                                               "percentage":  1.19
+                                           },
+                                           {
+                                               "candidateId":  60001619160,
+                                               "candidateNumber":  "1100",
+                                               "candidateName":  "RAFAEL BRANCO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  69,
+                                               "percentage":  0.55
+                                           },
+                                           {
+                                               "candidateId":  60001614163,
+                                               "candidateNumber":  "2277",
+                                               "candidateName":  "DR JAZIEL",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  55,
+                                               "percentage":  0.44
+                                           },
+                                           {
+                                               "candidateId":  60001619128,
+                                               "candidateNumber":  "1313",
+                                               "candidateName":  "LUIZIANNE LINS",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  52,
+                                               "percentage":  0.42
+                                           },
+                                           {
+                                               "candidateId":  60001619120,
+                                               "candidateNumber":  "1333",
+                                               "candidateName":  "JOSE AIRTON",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  50,
+                                               "percentage":  0.4
+                                           },
+                                           {
+                                               "candidateId":  60001601189,
+                                               "candidateNumber":  "5511",
+                                               "candidateName":  "CÉLIO STUDART",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  49,
+                                               "percentage":  0.39
+                                           },
+                                           {
+                                               "candidateId":  60001619170,
+                                               "candidateNumber":  "1111",
+                                               "candidateName":  "AJ ALBUQUERQUE",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  38,
+                                               "percentage":  0.3
+                                           },
+                                           {
+                                               "candidateId":  60001601192,
+                                               "candidateNumber":  "5588",
+                                               "candidateName":  "ELIANE BRAZ",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  36,
+                                               "percentage":  0.29
+                                           },
+                                           {
+                                               "candidateId":  60001619165,
+                                               "candidateNumber":  "1123",
+                                               "candidateName":  "TARSO MAGNO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  34,
+                                               "percentage":  0.27
+                                           },
+                                           {
+                                               "candidateId":  60001608884,
+                                               "candidateNumber":  "4490",
+                                               "candidateName":  "SOLDADO NOELIO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  27,
+                                               "percentage":  0.22
+                                           },
+                                           {
+                                               "candidateId":  60001601183,
+                                               "candidateNumber":  "5555",
+                                               "candidateName":  "DOMINGOS NETO",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  26,
+                                               "percentage":  0.21
+                                           },
+                                           {
+                                               "candidateId":  60001603478,
+                                               "candidateNumber":  "1222",
+                                               "candidateName":  "ROSÂNIA RAMALHO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  22,
+                                               "percentage":  0.18
+                                           },
+                                           {
+                                               "candidateId":  60001643127,
+                                               "candidateNumber":  "1522",
+                                               "candidateName":  "NELINHO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  18,
+                                               "percentage":  0.14
+                                           },
+                                           {
+                                               "candidateId":  60001619134,
+                                               "candidateNumber":  "1311",
+                                               "candidateName":  "LOURDINHA FELIX",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  17,
+                                               "percentage":  0.14
+                                           },
+                                           {
+                                               "candidateId":  60001614167,
+                                               "candidateNumber":  "2288",
+                                               "candidateName":  "PRISCILA COSTA",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  16,
+                                               "percentage":  0.13
+                                           },
+                                           {
+                                               "candidateId":  60001608890,
+                                               "candidateNumber":  "4444",
+                                               "candidateName":  "HEITOR FREIRE",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  16,
+                                               "percentage":  0.13
+                                           },
+                                           {
+                                               "candidateId":  60001619126,
+                                               "candidateNumber":  "6565",
+                                               "candidateName":  "INÁCIO ARRUDA",
+                                               "partyNumber":  65,
+                                               "partyAbbreviation":  "PC do B",
+                                               "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                               "votes":  15,
+                                               "percentage":  0.12
+                                           },
+                                           {
+                                               "candidateId":  60001608899,
+                                               "candidateNumber":  "4422",
+                                               "candidateName":  "JULIERME SENA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  14,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001603475,
+                                               "candidateNumber":  "1212",
+                                               "candidateName":  "LEÔNIDAS CRISTINO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  14,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001603468,
+                                               "candidateNumber":  "1292",
+                                               "candidateName":  "ENFERMEIRA ANA PAULA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  14,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001614165,
+                                               "candidateNumber":  "2200",
+                                               "candidateName":  "DRA. MAYRA PINHEIRO",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  12,
+                                               "percentage":  0.1
+                                           },
+                                           {
+                                               "candidateId":  60001603470,
+                                               "candidateNumber":  "1221",
+                                               "candidateName":  "MAURO FILHO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  12,
+                                               "percentage":  0.1
+                                           },
+                                           {
+                                               "candidateId":  60001608893,
+                                               "candidateNumber":  "4447",
+                                               "candidateName":  "DANILO FORTE",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  11,
+                                               "percentage":  0.09
+                                           },
+                                           {
+                                               "candidateId":  60001608900,
+                                               "candidateNumber":  "4410",
+                                               "candidateName":  "CARLOS MATOS",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  10,
+                                               "percentage":  0.08
+                                           },
+                                           {
+                                               "candidateId":  60001634106,
+                                               "candidateNumber":  "7011",
+                                               "candidateName":  "DR MARCOS",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  10,
+                                               "percentage":  0.08
+                                           },
+                                           {
+                                               "candidateId":  60001645836,
+                                               "candidateNumber":  "2055",
+                                               "candidateName":  "MARY SANTOS",
+                                               "partyNumber":  20,
+                                               "partyAbbreviation":  "PSC",
+                                               "partyName":  "PARTIDO SOCIAL CRISTÃO",
+                                               "votes":  9,
+                                               "percentage":  0.07
+                                           },
+                                           {
+                                               "candidateId":  60001613061,
+                                               "candidateNumber":  "5055",
+                                               "candidateName":  "GABRIEL BIOLOGIA",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  9,
+                                               "percentage":  0.07
+                                           },
+                                           {
+                                               "candidateId":  60001619161,
+                                               "candidateNumber":  "1122",
+                                               "candidateName":  "SÉRGIO DANTAS",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  9,
+                                               "percentage":  0.07
+                                           },
+                                           {
+                                               "candidateId":  60001613067,
+                                               "candidateNumber":  "5013",
+                                               "candidateName":  "ADELITA MONTEIRO",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001634339,
+                                               "candidateNumber":  "1251",
+                                               "candidateName":  "ARNON BEZERRA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001603472,
+                                               "candidateNumber":  "1214",
+                                               "candidateName":  "EDUARDO BISMARCK",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001643118,
+                                               "candidateNumber":  "1520",
+                                               "candidateName":  "FRANCISCO FABIANO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001619125,
+                                               "candidateNumber":  "1321",
+                                               "candidateName":  "CHRISTIANNE COELHO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001619163,
+                                               "candidateNumber":  "1155",
+                                               "candidateName":  "THIAGO ESMERALDO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001643117,
+                                               "candidateNumber":  "1500",
+                                               "candidateName":  "ÉRICO JOVINO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001643125,
+                                               "candidateNumber":  "1531",
+                                               "candidateName":  "ERON NARCISO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001603467,
+                                               "candidateNumber":  "1245",
+                                               "candidateName":  "ADRIELLY TEIXEIRA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001608898,
+                                               "candidateNumber":  "4456",
+                                               "candidateName":  "DAYANY DO CAPITÃO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001614162,
+                                               "candidateNumber":  "2210",
+                                               "candidateName":  "CORONEL AGINALDO",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001603465,
+                                               "candidateNumber":  "1232",
+                                               "candidateName":  "NATÁLIA RIOS",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001608850,
+                                               "candidateNumber":  "1000",
+                                               "candidateName":  "BISPA VANESSA LIMA",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001614170,
+                                               "candidateNumber":  "2201",
+                                               "candidateName":  "DELEGADO CAVALCANTE",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001619172,
+                                               "candidateNumber":  "1199",
+                                               "candidateName":  "ELIENE COUTO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001613063,
+                                               "candidateNumber":  "5001",
+                                               "candidateName":  "JOÃO ALFREDO",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001619132,
+                                               "candidateNumber":  "1323",
+                                               "candidateName":  "KIM LOPES",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001634087,
+                                               "candidateNumber":  "7040",
+                                               "candidateName":  "CHICO ANTÔNIO",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001603473,
+                                               "candidateNumber":  "1215",
+                                               "candidateName":  "FLÁVIO VAZ",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001608880,
+                                               "candidateNumber":  "4466",
+                                               "candidateName":  "PATRICIA MARXS",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001614159,
+                                               "candidateNumber":  "2220",
+                                               "candidateName":  "VALDIM GONÇALVES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001614153,
+                                               "candidateNumber":  "2233",
+                                               "candidateName":  "GORETE PEREIRA",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608887,
+                                               "candidateNumber":  "4400",
+                                               "candidateName":  "LUIZ CARLOS JR",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001619167,
+                                               "candidateNumber":  "1133",
+                                               "candidateName":  "XISTO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001603453,
+                                               "candidateNumber":  "4003",
+                                               "candidateName":  "LEO AZEVEDO",
+                                               "partyNumber":  40,
+                                               "partyAbbreviation":  "PSB",
+                                               "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001613070,
+                                               "candidateNumber":  "5050",
+                                               "candidateName":  "AILTON LOPES",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608896,
+                                               "candidateNumber":  "4412",
+                                               "candidateName":  "PASTOR PEDRO RIBEIRO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001692744,
+                                               "candidateNumber":  "3333",
+                                               "candidateName":  "VICENCIA LEANDRO",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001613071,
+                                               "candidateNumber":  "5005",
+                                               "candidateName":  "ANNA KARINA VOZES FEMINISTAS",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001619173,
+                                               "candidateNumber":  "1112",
+                                               "candidateName":  "GOMES FARIAS",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001619137,
+                                               "candidateNumber":  "1300",
+                                               "candidateName":  "HILTINHO DO CASE",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001613079,
+                                               "candidateNumber":  "5044",
+                                               "candidateName":  "LÍDIA DO BORA DE RUMA",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608863,
+                                               "candidateNumber":  "1012",
+                                               "candidateName":  "DR FELIPE MONTEIRO",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001619129,
+                                               "candidateNumber":  "1331",
+                                               "candidateName":  "LEDA VASCONCELOS",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001643124,
+                                               "candidateNumber":  "1513",
+                                               "candidateName":  "CÉSAR DO VALE",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608857,
+                                               "candidateNumber":  "1055",
+                                               "candidateName":  "MANUH SILVA",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001603479,
+                                               "candidateNumber":  "1255",
+                                               "candidateName":  "CLERYNEUMA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608897,
+                                               "candidateNumber":  "4411",
+                                               "candidateName":  "VANDERLAN ALVES",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001634107,
+                                               "candidateNumber":  "7022",
+                                               "candidateName":  "ANSELMO MORORÓ",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001668480,
+                                               "candidateNumber":  "1444",
+                                               "candidateName":  "CABO JORDÂNIA",
+                                               "partyNumber":  14,
+                                               "partyAbbreviation":  "PTB",
+                                               "partyName":  "PARTIDO TRABALHISTA BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608854,
+                                               "candidateNumber":  "1016",
+                                               "candidateName":  "PR RODRIGO MATOS",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001692740,
+                                               "candidateNumber":  "3323",
+                                               "candidateName":  "EVANDRO PONTES",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619138,
+                                               "candidateNumber":  "1399",
+                                               "candidateName":  "MAXSWELL",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608885,
+                                               "candidateNumber":  "4489",
+                                               "candidateName":  "PROF. REJANE SOUZA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001603474,
+                                               "candidateNumber":  "1285",
+                                               "candidateName":  "IANNA BRANDÃO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634097,
+                                               "candidateNumber":  "7077",
+                                               "candidateName":  "MÔNICA SANTOS",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001668468,
+                                               "candidateNumber":  "1447",
+                                               "candidateName":  "ILTON DE CASTRO",
+                                               "partyNumber":  14,
+                                               "partyAbbreviation":  "PTB",
+                                               "partyName":  "PARTIDO TRABALHISTA BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001645841,
+                                               "candidateNumber":  "2022",
+                                               "candidateName":  "DRA CINTHIA BELINO",
+                                               "partyNumber":  20,
+                                               "partyAbbreviation":  "PSC",
+                                               "partyName":  "PARTIDO SOCIAL CRISTÃO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001668467,
+                                               "candidateNumber":  "1477",
+                                               "candidateName":  "CARLOS REBOUÇAS",
+                                               "partyNumber":  14,
+                                               "partyAbbreviation":  "PTB",
+                                               "partyName":  "PARTIDO TRABALHISTA BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001723403,
+                                               "candidateNumber":  "2313",
+                                               "candidateName":  "PÉROLA DE OYÁ",
+                                               "partyNumber":  23,
+                                               "partyAbbreviation":  "CIDADANIA",
+                                               "partyName":  "CIDADANIA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619135,
+                                               "candidateNumber":  "1319",
+                                               "candidateName":  "PROF.  REJANE PINHEIRO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001603460,
+                                               "candidateNumber":  "4022",
+                                               "candidateName":  "DUDA DO CRATO",
+                                               "partyNumber":  40,
+                                               "partyAbbreviation":  "PSB",
+                                               "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619169,
+                                               "candidateNumber":  "1190",
+                                               "candidateName":  "SEGUNDINHO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619162,
+                                               "candidateNumber":  "1118",
+                                               "candidateName":  "LOURA DO POVO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608892,
+                                               "candidateNumber":  "4455",
+                                               "candidateName":  "VAIDON OLIVEIRA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608883,
+                                               "candidateNumber":  "4423",
+                                               "candidateName":  "FRANCISCA CABRAL",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001603462,
+                                               "candidateNumber":  "4040",
+                                               "candidateName":  "DR CARLOS MACEDO",
+                                               "partyNumber":  40,
+                                               "partyAbbreviation":  "PSB",
+                                               "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001643113,
+                                               "candidateNumber":  "1512",
+                                               "candidateName":  "NEUSA DO FREI DAMIÃO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608889,
+                                               "candidateNumber":  "4440",
+                                               "candidateName":  "CAETANO NETO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001643130,
+                                               "candidateNumber":  "1515",
+                                               "candidateName":  "MOACENY FÉLIX",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634090,
+                                               "candidateNumber":  "7070",
+                                               "candidateName":  "ALEXANDRE SOBREIRA",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619123,
+                                               "candidateNumber":  "1369",
+                                               "candidateName":  "COSME AQUINO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608879,
+                                               "candidateNumber":  "4445",
+                                               "candidateName":  "DAMIÃO TENORIO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634099,
+                                               "candidateNumber":  "7078",
+                                               "candidateName":  "VALBERTO DO SERRANO",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001643126,
+                                               "candidateNumber":  "1588",
+                                               "candidateName":  "REGINA VILLELA",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619153,
+                                               "candidateNumber":  "5120",
+                                               "candidateName":  "ANA MARTINS",
+                                               "partyNumber":  51,
+                                               "partyAbbreviation":  "PATRIOTA",
+                                               "partyName":  "PATRIOTA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619081,
+                                               "candidateNumber":  "9090",
+                                               "candidateName":  "ADILSON PINHO",
+                                               "partyNumber":  90,
+                                               "partyAbbreviation":  "PROS",
+                                               "partyName":  "PARTIDO REPUBLICANO DA ORDEM SOCIAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           }
+                                       ],
+                        "parties":  [
+                                        {
+                                            "partyNumber":  10,
+                                            "partyAbbreviation":  "REPUBLICANOS",
+                                            "partyName":  "REPUBLICANOS",
+                                            "nominalVotes":  624,
+                                            "legendVotes":  21,
+                                            "totalVotes":  645,
+                                            "percentage":  5.16
+                                        },
+                                        {
+                                            "partyNumber":  11,
+                                            "partyAbbreviation":  "PP",
+                                            "partyName":  "PROGRESSISTAS",
+                                            "nominalVotes":  167,
+                                            "legendVotes":  43,
+                                            "totalVotes":  210,
+                                            "percentage":  1.68
+                                        },
+                                        {
+                                            "partyNumber":  12,
+                                            "partyAbbreviation":  "PDT",
+                                            "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                            "nominalVotes":  2219,
+                                            "legendVotes":  195,
+                                            "totalVotes":  2414,
+                                            "percentage":  19.32
+                                        },
+                                        {
+                                            "partyNumber":  13,
+                                            "partyAbbreviation":  "PT",
+                                            "partyName":  "PARTIDO DOS TRABALHADORES",
+                                            "nominalVotes":  1628,
+                                            "legendVotes":  144,
+                                            "totalVotes":  1772,
+                                            "percentage":  14.18
+                                        },
+                                        {
+                                            "partyNumber":  14,
+                                            "partyAbbreviation":  "PTB",
+                                            "partyName":  "PARTIDO TRABALHISTA BRASILEIRO",
+                                            "nominalVotes":  3,
+                                            "legendVotes":  10,
+                                            "totalVotes":  13,
+                                            "percentage":  0.1
+                                        },
+                                        {
+                                            "partyNumber":  15,
+                                            "partyAbbreviation":  "MDB",
+                                            "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                            "nominalVotes":  3490,
+                                            "legendVotes":  50,
+                                            "totalVotes":  3540,
+                                            "percentage":  28.33
+                                        },
+                                        {
+                                            "partyNumber":  16,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Partido Socialista dos Trabalhadores Unificado",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  1,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        },
+                                        {
+                                            "partyNumber":  18,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Rede Sustentabilidade",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  1,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        },
+                                        {
+                                            "partyNumber":  20,
+                                            "partyAbbreviation":  "PSC",
+                                            "partyName":  "PARTIDO SOCIAL CRISTÃO",
+                                            "nominalVotes":  10,
+                                            "legendVotes":  1,
+                                            "totalVotes":  11,
+                                            "percentage":  0.09
+                                        },
+                                        {
+                                            "partyNumber":  21,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Partido Comunista Brasileiro",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  13,
+                                            "totalVotes":  13,
+                                            "percentage":  0.1
+                                        },
+                                        {
+                                            "partyNumber":  22,
+                                            "partyAbbreviation":  "PL",
+                                            "partyName":  "PARTIDO LIBERAL",
+                                            "nominalVotes":  1377,
+                                            "legendVotes":  23,
+                                            "totalVotes":  1400,
+                                            "percentage":  11.2
+                                        },
+                                        {
+                                            "partyNumber":  23,
+                                            "partyAbbreviation":  "CIDADANIA",
+                                            "partyName":  "CIDADANIA",
+                                            "nominalVotes":  1,
+                                            "legendVotes":  13,
+                                            "totalVotes":  14,
+                                            "percentage":  0.11
+                                        },
+                                        {
+                                            "partyNumber":  33,
+                                            "partyAbbreviation":  "PMN",
+                                            "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                            "nominalVotes":  3,
+                                            "legendVotes":  6,
+                                            "totalVotes":  9,
+                                            "percentage":  0.07
+                                        },
+                                        {
+                                            "partyNumber":  35,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Partido da Mulher Brasileira",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  2,
+                                            "totalVotes":  2,
+                                            "percentage":  0.02
+                                        },
+                                        {
+                                            "partyNumber":  36,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "AGIR",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  2,
+                                            "totalVotes":  2,
+                                            "percentage":  0.02
+                                        },
+                                        {
+                                            "partyNumber":  40,
+                                            "partyAbbreviation":  "PSB",
+                                            "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                            "nominalVotes":  261,
+                                            "legendVotes":  3,
+                                            "totalVotes":  264,
+                                            "percentage":  2.11
+                                        },
+                                        {
+                                            "partyNumber":  44,
+                                            "partyAbbreviation":  "UNIÃO",
+                                            "partyName":  "UNIÃO BRASIL",
+                                            "nominalVotes":  1718,
+                                            "legendVotes":  23,
+                                            "totalVotes":  1741,
+                                            "percentage":  13.93
+                                        },
+                                        {
+                                            "partyNumber":  45,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Partido da Social Democracia Brasileira",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  3,
+                                            "totalVotes":  3,
+                                            "percentage":  0.02
+                                        },
+                                        {
+                                            "partyNumber":  50,
+                                            "partyAbbreviation":  "PSOL",
+                                            "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                            "nominalVotes":  27,
+                                            "legendVotes":  0,
+                                            "totalVotes":  27,
+                                            "percentage":  0.22
+                                        },
+                                        {
+                                            "partyNumber":  51,
+                                            "partyAbbreviation":  "PATRIOTA",
+                                            "partyName":  "PATRIOTA",
+                                            "nominalVotes":  1,
+                                            "legendVotes":  1,
+                                            "totalVotes":  2,
+                                            "percentage":  0.02
+                                        },
+                                        {
+                                            "partyNumber":  55,
+                                            "partyAbbreviation":  "PSD",
+                                            "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                            "nominalVotes":  355,
+                                            "legendVotes":  6,
+                                            "totalVotes":  361,
+                                            "percentage":  2.89
+                                        },
+                                        {
+                                            "partyNumber":  65,
+                                            "partyAbbreviation":  "PC do B",
+                                            "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                            "nominalVotes":  15,
+                                            "legendVotes":  14,
+                                            "totalVotes":  29,
+                                            "percentage":  0.23
+                                        },
+                                        {
+                                            "partyNumber":  70,
+                                            "partyAbbreviation":  "AVANTE",
+                                            "partyName":  "AVANTE",
+                                            "nominalVotes":  18,
+                                            "legendVotes":  2,
+                                            "totalVotes":  20,
+                                            "percentage":  0.16
+                                        },
+                                        {
+                                            "partyNumber":  90,
+                                            "partyAbbreviation":  "PROS",
+                                            "partyName":  "PARTIDO REPUBLICANO DA ORDEM SOCIAL",
+                                            "nominalVotes":  1,
+                                            "legendVotes":  0,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        }
+                                    ]
+                    },
+                    {
+                        "officeCode":  7,
+                        "officeName":  "Deputado Estadual",
+                        "totalVotes":  13178,
+                        "validVotes":  12364,
+                        "nominalVotes":  11001,
+                        "legendVotes":  1363,
+                        "blankVotes":  503,
+                        "nullVotes":  311,
+                        "candidates":  [
+                                           {
+                                               "candidateId":  60001603545,
+                                               "candidateNumber":  "12333",
+                                               "candidateName":  "MARCOS SOBREIRA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  4590,
+                                               "percentage":  37.12
+                                           },
+                                           {
+                                               "candidateId":  60001633655,
+                                               "candidateNumber":  "13222",
+                                               "candidateName":  "FERNANDO SANTANA",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  2225,
+                                               "percentage":  18
+                                           },
+                                           {
+                                               "candidateId":  60001633645,
+                                               "candidateNumber":  "65123",
+                                               "candidateName":  "LUCAS BRASIL",
+                                               "partyNumber":  65,
+                                               "partyAbbreviation":  "PC do B",
+                                               "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                               "votes":  760,
+                                               "percentage":  6.15
+                                           },
+                                           {
+                                               "candidateId":  60001619183,
+                                               "candidateNumber":  "11999",
+                                               "candidateName":  "MOÉSIO LOIOLA",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  720,
+                                               "percentage":  5.82
+                                           },
+                                           {
+                                               "candidateId":  60001633672,
+                                               "candidateNumber":  "65700",
+                                               "candidateName":  "ALYSSON AGUIAR",
+                                               "partyNumber":  65,
+                                               "partyAbbreviation":  "PC do B",
+                                               "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                               "votes":  466,
+                                               "percentage":  3.77
+                                           },
+                                           {
+                                               "candidateId":  60001635812,
+                                               "candidateNumber":  "15222",
+                                               "candidateName":  "DAVI DE RAIMUNDÃO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  319,
+                                               "percentage":  2.58
+                                           },
+                                           {
+                                               "candidateId":  60001633671,
+                                               "candidateNumber":  "13456",
+                                               "candidateName":  "DE ASSIS DINIZ",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  215,
+                                               "percentage":  1.74
+                                           },
+                                           {
+                                               "candidateId":  60001633676,
+                                               "candidateNumber":  "13111",
+                                               "candidateName":  "PEDRO LOBO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  214,
+                                               "percentage":  1.73
+                                           },
+                                           {
+                                               "candidateId":  60001603539,
+                                               "candidateNumber":  "12600",
+                                               "candidateName":  "TIN GOMES",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  189,
+                                               "percentage":  1.53
+                                           },
+                                           {
+                                               "candidateId":  60001603528,
+                                               "candidateNumber":  "12456",
+                                               "candidateName":  "ROMEU ALDIGUERI",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  147,
+                                               "percentage":  1.19
+                                           },
+                                           {
+                                               "candidateId":  60001634432,
+                                               "candidateNumber":  "70222",
+                                               "candidateName":  "STUART CASTRO",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  114,
+                                               "percentage":  0.92
+                                           },
+                                           {
+                                               "candidateId":  60001633829,
+                                               "candidateNumber":  "22222",
+                                               "candidateName":  "PR.ALCIDES FERNANDES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  105,
+                                               "percentage":  0.85
+                                           },
+                                           {
+                                               "candidateId":  60001603529,
+                                               "candidateNumber":  "12123",
+                                               "candidateName":  "CLÁUDIO PINHO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  98,
+                                               "percentage":  0.79
+                                           },
+                                           {
+                                               "candidateId":  60001608816,
+                                               "candidateNumber":  "10123",
+                                               "candidateName":  "DAVID DURAND",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  83,
+                                               "percentage":  0.67
+                                           },
+                                           {
+                                               "candidateId":  60001633828,
+                                               "candidateNumber":  "22777",
+                                               "candidateName":  "DRA SILVANA",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  62,
+                                               "percentage":  0.5
+                                           },
+                                           {
+                                               "candidateId":  60001613095,
+                                               "candidateNumber":  "50444",
+                                               "candidateName":  "ZULEIDE QUEIROZ",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  38,
+                                               "percentage":  0.31
+                                           },
+                                           {
+                                               "candidateId":  60001635805,
+                                               "candidateNumber":  "15333",
+                                               "candidateName":  "DANNIEL OLIVEIRA",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  34,
+                                               "percentage":  0.27
+                                           },
+                                           {
+                                               "candidateId":  60001723726,
+                                               "candidateNumber":  "23333",
+                                               "candidateName":  "DOUTOR LEITÃO",
+                                               "partyNumber":  23,
+                                               "partyAbbreviation":  "CIDADANIA",
+                                               "partyName":  "CIDADANIA",
+                                               "votes":  34,
+                                               "percentage":  0.27
+                                           },
+                                           {
+                                               "candidateId":  60001633791,
+                                               "candidateNumber":  "22022",
+                                               "candidateName":  "CARMELO NETO",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  31,
+                                               "percentage":  0.25
+                                           },
+                                           {
+                                               "candidateId":  60001603537,
+                                               "candidateNumber":  "12120",
+                                               "candidateName":  "MARIANGELA BANDEIRA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  28,
+                                               "percentage":  0.23
+                                           },
+                                           {
+                                               "candidateId":  60001608935,
+                                               "candidateNumber":  "44190",
+                                               "candidateName":  "SARGENTO REGINAURO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  25,
+                                               "percentage":  0.2
+                                           },
+                                           {
+                                               "candidateId":  60001633642,
+                                               "candidateNumber":  "13333",
+                                               "candidateName":  "MOISES BRAZ",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  23,
+                                               "percentage":  0.19
+                                           },
+                                           {
+                                               "candidateId":  60001603520,
+                                               "candidateNumber":  "12222",
+                                               "candidateName":  "OSMAR BAQUIT",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  23,
+                                               "percentage":  0.19
+                                           },
+                                           {
+                                               "candidateId":  60001633801,
+                                               "candidateNumber":  "22678",
+                                               "candidateName":  "ELIAQUIM LANDIM",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  23,
+                                               "percentage":  0.19
+                                           },
+                                           {
+                                               "candidateId":  60001635804,
+                                               "candidateNumber":  "15123",
+                                               "candidateName":  "AUDIC MOTA",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  22,
+                                               "percentage":  0.18
+                                           },
+                                           {
+                                               "candidateId":  60001633644,
+                                               "candidateNumber":  "65013",
+                                               "candidateName":  "PROFESSOR ANÍZIO",
+                                               "partyNumber":  65,
+                                               "partyAbbreviation":  "PC do B",
+                                               "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                               "votes":  22,
+                                               "percentage":  0.18
+                                           },
+                                           {
+                                               "candidateId":  60001633657,
+                                               "candidateNumber":  "13777",
+                                               "candidateName":  "NIZO ",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  18,
+                                               "percentage":  0.15
+                                           },
+                                           {
+                                               "candidateId":  60001635816,
+                                               "candidateNumber":  "15120",
+                                               "candidateName":  "JACQUELINE GOUVEIA",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  18,
+                                               "percentage":  0.15
+                                           },
+                                           {
+                                               "candidateId":  60001603523,
+                                               "candidateNumber":  "12555",
+                                               "candidateName":  "ORIEL FILHO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  15,
+                                               "percentage":  0.12
+                                           },
+                                           {
+                                               "candidateId":  60001603535,
+                                               "candidateNumber":  "12000",
+                                               "candidateName":  "EVANDRO LEITÃO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  14,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001613524,
+                                               "candidateNumber":  "55100",
+                                               "candidateName":  "VINICIUS DUARTE",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  14,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001723716,
+                                               "candidateNumber":  "23192",
+                                               "candidateName":  "MARTINHA - A SAÚDE RESISTE",
+                                               "partyNumber":  23,
+                                               "partyAbbreviation":  "CIDADANIA",
+                                               "partyName":  "CIDADANIA",
+                                               "votes":  13,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001633803,
+                                               "candidateNumber":  "22322",
+                                               "candidateName":  "PRAXEDES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  13,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001635791,
+                                               "candidateNumber":  "15331",
+                                               "candidateName":  "CLAUDIA HELENA",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  13,
+                                               "percentage":  0.11
+                                           },
+                                           {
+                                               "candidateId":  60001633668,
+                                               "candidateNumber":  "13132",
+                                               "candidateName":  "ACRISIO SENA",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  10,
+                                               "percentage":  0.08
+                                           },
+                                           {
+                                               "candidateId":  60001608929,
+                                               "candidateNumber":  "44888",
+                                               "candidateName":  "DR. OSCAR RODRIGUES",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  10,
+                                               "percentage":  0.08
+                                           },
+                                           {
+                                               "candidateId":  60001723714,
+                                               "candidateNumber":  "45000",
+                                               "candidateName":  "JORGE PINHEIRO",
+                                               "partyNumber":  45,
+                                               "partyAbbreviation":  "PSDB",
+                                               "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                               "votes":  10,
+                                               "percentage":  0.08
+                                           },
+                                           {
+                                               "candidateId":  60001608941,
+                                               "candidateNumber":  "44555",
+                                               "candidateName":  "DR. ALOÍSIO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  9,
+                                               "percentage":  0.07
+                                           },
+                                           {
+                                               "candidateId":  60001608911,
+                                               "candidateNumber":  "44123",
+                                               "candidateName":  "TONY BRITO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  9,
+                                               "percentage":  0.07
+                                           },
+                                           {
+                                               "candidateId":  60001619174,
+                                               "candidateNumber":  "11123",
+                                               "candidateName":  "ROSÁLIO DANIEL",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  9,
+                                               "percentage":  0.07
+                                           },
+                                           {
+                                               "candidateId":  60001633660,
+                                               "candidateNumber":  "13131",
+                                               "candidateName":  "MARI LACERDA",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  8,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001603543,
+                                               "candidateNumber":  "12345",
+                                               "candidateName":  "LIA GOMES",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  8,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001633635,
+                                               "candidateNumber":  "13234",
+                                               "candidateName":  "GUILHERME SAMPAIO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001633805,
+                                               "candidateNumber":  "22111",
+                                               "candidateName":  "PEDRO MATOS",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001633675,
+                                               "candidateNumber":  "13555",
+                                               "candidateName":  "JULIANA LUCENA",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001608940,
+                                               "candidateNumber":  "44777",
+                                               "candidateName":  "FIRMO CAMURÇA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  7,
+                                               "percentage":  0.06
+                                           },
+                                           {
+                                               "candidateId":  60001613104,
+                                               "candidateNumber":  "50500",
+                                               "candidateName":  "RENATO ROSENO",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  6,
+                                               "percentage":  0.05
+                                           },
+                                           {
+                                               "candidateId":  60001603540,
+                                               "candidateNumber":  "12789",
+                                               "candidateName":  "ALESSANDRA SABINO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001608819,
+                                               "candidateNumber":  "10000",
+                                               "candidateName":  "APÓSTOLO LUIZ HENRIQUE",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001635818,
+                                               "candidateNumber":  "15555",
+                                               "candidateName":  "FELIPE AGUIAR",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001633647,
+                                               "candidateNumber":  "65000",
+                                               "candidateName":  "DRA TAÍS MATOS",
+                                               "partyNumber":  65,
+                                               "partyAbbreviation":  "PC do B",
+                                               "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001633823,
+                                               "candidateNumber":  "22556",
+                                               "candidateName":  "DAVID PROARMAS",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001634425,
+                                               "candidateNumber":  "70070",
+                                               "candidateName":  "ALBERTO LIMA",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001633656,
+                                               "candidateNumber":  "13133",
+                                               "candidateName":  "LARISSA GASPAR",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001613538,
+                                               "candidateNumber":  "55555",
+                                               "candidateName":  "GABRIELLA AGUIAR",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001613532,
+                                               "candidateNumber":  "55111",
+                                               "candidateName":  "SÁVIO PONTES",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  5,
+                                               "percentage":  0.04
+                                           },
+                                           {
+                                               "candidateId":  60001613526,
+                                               "candidateNumber":  "55333",
+                                               "candidateName":  "SIMÃO PEDRO",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001619176,
+                                               "candidateNumber":  "11333",
+                                               "candidateName":  "HILMA COUTINHO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001646056,
+                                               "candidateNumber":  "33000",
+                                               "candidateName":  "GABRIEL SABOIA",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001633816,
+                                               "candidateNumber":  "22555",
+                                               "candidateName":  "MARTA GONÇALVES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001634412,
+                                               "candidateNumber":  "70007",
+                                               "candidateName":  "DANILO LOPES",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001619179,
+                                               "candidateNumber":  "11111",
+                                               "candidateName":  "ZEZINHO ALBUQUERQUE",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001633648,
+                                               "candidateNumber":  "13123",
+                                               "candidateName":  "MISSIAS DO MST",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001603510,
+                                               "candidateNumber":  "40222",
+                                               "candidateName":  "ESTER FERREIRA",
+                                               "partyNumber":  40,
+                                               "partyAbbreviation":  "PSB",
+                                               "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001619186,
+                                               "candidateNumber":  "11222",
+                                               "candidateName":  "DR VICTOR GURGEL",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  4,
+                                               "percentage":  0.03
+                                           },
+                                           {
+                                               "candidateId":  60001646070,
+                                               "candidateNumber":  "33123",
+                                               "candidateName":  "ALCY PINHEIRO",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001603547,
+                                               "candidateNumber":  "12111",
+                                               "candidateName":  "ANTONIO HENRIQUE",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608946,
+                                               "candidateNumber":  "44111",
+                                               "candidateName":  "FELIPE MOTA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001603525,
+                                               "candidateNumber":  "12114",
+                                               "candidateName":  "GUILHERME LANDIM",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608918,
+                                               "candidateNumber":  "44222",
+                                               "candidateName":  "DR. JUAREZ SARAIVA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001603532,
+                                               "candidateNumber":  "12999",
+                                               "candidateName":  "BRUNO PEDROSA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001646053,
+                                               "candidateNumber":  "33777",
+                                               "candidateName":  "PASTOR FLÁVIO SANTOS",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001634405,
+                                               "candidateNumber":  "70321",
+                                               "candidateName":  "DANIEL BORGES",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  3,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001619102,
+                                               "candidateNumber":  "90192",
+                                               "candidateName":  "CAPITAO SILVA",
+                                               "partyNumber":  90,
+                                               "partyAbbreviation":  "PROS",
+                                               "partyName":  "PARTIDO REPUBLICANO DA ORDEM SOCIAL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001603519,
+                                               "candidateNumber":  "12011",
+                                               "candidateName":  "JOTA LIMA JUMENTIM AMARELO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001634409,
+                                               "candidateNumber":  "70123",
+                                               "candidateName":  "TOMAZ HOLANDA",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608922,
+                                               "candidateNumber":  "44027",
+                                               "candidateName":  "PROFESSOR CARDOSO NETO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001668705,
+                                               "candidateNumber":  "14357",
+                                               "candidateName":  "CABO ERICKSON",
+                                               "partyNumber":  14,
+                                               "partyAbbreviation":  "PTB",
+                                               "partyName":  "PARTIDO TRABALHISTA BRASILEIRO",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001619175,
+                                               "candidateNumber":  "11444",
+                                               "candidateName":  "LEONARDO PINHEIRO",
+                                               "partyNumber":  11,
+                                               "partyAbbreviation":  "PP",
+                                               "partyName":  "PROGRESSISTAS",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001633821,
+                                               "candidateNumber":  "22120",
+                                               "candidateName":  "ALEX CEARÁ",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001633665,
+                                               "candidateNumber":  "43222",
+                                               "candidateName":  "REGINALDO CASTRO",
+                                               "partyNumber":  43,
+                                               "partyAbbreviation":  "PV",
+                                               "partyName":  "PARTIDO VERDE",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001636433,
+                                               "candidateNumber":  "45645",
+                                               "candidateName":  "RENATA SILVA",
+                                               "partyNumber":  45,
+                                               "partyAbbreviation":  "PSDB",
+                                               "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608932,
+                                               "candidateNumber":  "44556",
+                                               "candidateName":  "PRISCILA ROCHA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001723724,
+                                               "candidateNumber":  "45333",
+                                               "candidateName":  "DIEGO BARRETO",
+                                               "partyNumber":  45,
+                                               "partyAbbreviation":  "PSDB",
+                                               "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001723731,
+                                               "candidateNumber":  "45999",
+                                               "candidateName":  "FERREIRA ARAGÃO",
+                                               "partyNumber":  45,
+                                               "partyAbbreviation":  "PSDB",
+                                               "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001613534,
+                                               "candidateNumber":  "55888",
+                                               "candidateName":  "KEIVIA DIAS",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001608937,
+                                               "candidateNumber":  "44654",
+                                               "candidateName":  "DEMONTIER AGRA",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  2,
+                                               "percentage":  0.02
+                                           },
+                                           {
+                                               "candidateId":  60001646080,
+                                               "candidateNumber":  "33321",
+                                               "candidateName":  "PAULO DO PORTAL",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633650,
+                                               "candidateNumber":  "13013",
+                                               "candidateName":  "DRA. DENISE",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633674,
+                                               "candidateNumber":  "13444",
+                                               "candidateName":  "DR. JUAREZ VASCONCELOS",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634341,
+                                               "candidateNumber":  "80180",
+                                               "candidateName":  "SARAH PRETA SIMOA",
+                                               "partyNumber":  80,
+                                               "partyAbbreviation":  "UP",
+                                               "partyName":  "UNIDADE POPULAR",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633670,
+                                               "candidateNumber":  "13130",
+                                               "candidateName":  "PROFESSORA TERESINHA",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634415,
+                                               "candidateNumber":  "70000",
+                                               "candidateName":  "TAM DE OLIVEIRA",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001603530,
+                                               "candidateNumber":  "12330",
+                                               "candidateName":  "MARILLAC LIMA",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633792,
+                                               "candidateNumber":  "22380",
+                                               "candidateName":  "DUDU DIÓGENES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001646055,
+                                               "candidateNumber":  "33111",
+                                               "candidateName":  "SOLISMAR",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608945,
+                                               "candidateNumber":  "44999",
+                                               "candidateName":  "CANDIDO ALEXANDRINO",
+                                               "partyNumber":  44,
+                                               "partyAbbreviation":  "UNIÃO",
+                                               "partyName":  "UNIÃO BRASIL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001619108,
+                                               "candidateNumber":  "90180",
+                                               "candidateName":  "FABIO MARANGONI",
+                                               "partyNumber":  90,
+                                               "partyAbbreviation":  "PROS",
+                                               "partyName":  "PARTIDO REPUBLICANO DA ORDEM SOCIAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608842,
+                                               "candidateNumber":  "10001",
+                                               "candidateName":  "JUAN BRILHANTE",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001613100,
+                                               "candidateNumber":  "50100",
+                                               "candidateName":  "EXPEDITO GUEDES",
+                                               "partyNumber":  50,
+                                               "partyAbbreviation":  "PSOL",
+                                               "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634389,
+                                               "candidateNumber":  "70444",
+                                               "candidateName":  "ANA CLEIDE",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001603518,
+                                               "candidateNumber":  "12500",
+                                               "candidateName":  "SALMITO",
+                                               "partyNumber":  12,
+                                               "partyAbbreviation":  "PDT",
+                                               "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001723719,
+                                               "candidateNumber":  "23190",
+                                               "candidateName":  "TENENTE DANTAS",
+                                               "partyNumber":  23,
+                                               "partyAbbreviation":  "CIDADANIA",
+                                               "partyName":  "CIDADANIA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633654,
+                                               "candidateNumber":  "43333",
+                                               "candidateName":  "TEO MENEZES",
+                                               "partyNumber":  43,
+                                               "partyAbbreviation":  "PV",
+                                               "partyName":  "PARTIDO VERDE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633827,
+                                               "candidateNumber":  "22567",
+                                               "candidateName":  "VANDECI DANTAS",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001613539,
+                                               "candidateNumber":  "55123",
+                                               "candidateName":  "KIKO SAMPAIO",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633800,
+                                               "candidateNumber":  "22333",
+                                               "candidateName":  "DR THIAGO SALES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633659,
+                                               "candidateNumber":  "13789",
+                                               "candidateName":  "JULINHO",
+                                               "partyNumber":  13,
+                                               "partyAbbreviation":  "PT",
+                                               "partyName":  "PARTIDO DOS TRABALHADORES",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001608827,
+                                               "candidateNumber":  "10122",
+                                               "candidateName":  "APÓSTOLO CARLOS BRUNILDO",
+                                               "partyNumber":  10,
+                                               "partyAbbreviation":  "REPUBLICANOS",
+                                               "partyName":  "REPUBLICANOS",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001646047,
+                                               "candidateNumber":  "33333",
+                                               "candidateName":  "ANNE MORAIS",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633813,
+                                               "candidateNumber":  "22422",
+                                               "candidateName":  "DR MARCELO",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001613528,
+                                               "candidateNumber":  "55860",
+                                               "candidateName":  "POETA PEDRO SAMPAIO",
+                                               "partyNumber":  55,
+                                               "partyAbbreviation":  "PSD",
+                                               "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001635809,
+                                               "candidateNumber":  "15888",
+                                               "candidateName":  "AGENOR NETO",
+                                               "partyNumber":  15,
+                                               "partyAbbreviation":  "MDB",
+                                               "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001646046,
+                                               "candidateNumber":  "33888",
+                                               "candidateName":  "THIAGO CIRIACO",
+                                               "partyNumber":  33,
+                                               "partyAbbreviation":  "PMN",
+                                               "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001634395,
+                                               "candidateNumber":  "70345",
+                                               "candidateName":  "MARQUINHO TIRADENTES",
+                                               "partyNumber":  70,
+                                               "partyAbbreviation":  "AVANTE",
+                                               "partyName":  "AVANTE",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001723720,
+                                               "candidateNumber":  "45555",
+                                               "candidateName":  "VIANEY DO VALE",
+                                               "partyNumber":  45,
+                                               "partyAbbreviation":  "PSDB",
+                                               "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001727605,
+                                               "candidateNumber":  "45456",
+                                               "candidateName":  "ADRIA",
+                                               "partyNumber":  45,
+                                               "partyAbbreviation":  "PSDB",
+                                               "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633822,
+                                               "candidateNumber":  "22010",
+                                               "candidateName":  "BEZERRA DE MENESES",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001633831,
+                                               "candidateNumber":  "22122",
+                                               "candidateName":  "ARI COWBOY",
+                                               "partyNumber":  22,
+                                               "partyAbbreviation":  "PL",
+                                               "partyName":  "PARTIDO LIBERAL",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           },
+                                           {
+                                               "candidateId":  60001613152,
+                                               "candidateNumber":  "19999",
+                                               "candidateName":  "RUBENS TORRES",
+                                               "partyNumber":  19,
+                                               "partyAbbreviation":  "PODE",
+                                               "partyName":  "PODEMOS",
+                                               "votes":  1,
+                                               "percentage":  0.01
+                                           }
+                                       ],
+                        "parties":  [
+                                        {
+                                            "partyNumber":  10,
+                                            "partyAbbreviation":  "REPUBLICANOS",
+                                            "partyName":  "REPUBLICANOS",
+                                            "nominalVotes":  90,
+                                            "legendVotes":  19,
+                                            "totalVotes":  109,
+                                            "percentage":  0.88
+                                        },
+                                        {
+                                            "partyNumber":  11,
+                                            "partyAbbreviation":  "PP",
+                                            "partyName":  "PROGRESSISTAS",
+                                            "nominalVotes":  743,
+                                            "legendVotes":  51,
+                                            "totalVotes":  794,
+                                            "percentage":  6.42
+                                        },
+                                        {
+                                            "partyNumber":  12,
+                                            "partyAbbreviation":  "PDT",
+                                            "partyName":  "PARTIDO DEMOCRÁTICO TRABALHISTA",
+                                            "nominalVotes":  5130,
+                                            "legendVotes":  199,
+                                            "totalVotes":  5329,
+                                            "percentage":  43.1
+                                        },
+                                        {
+                                            "partyNumber":  13,
+                                            "partyAbbreviation":  "PT",
+                                            "partyName":  "PARTIDO DOS TRABALHADORES",
+                                            "nominalVotes":  2740,
+                                            "legendVotes":  818,
+                                            "totalVotes":  3558,
+                                            "percentage":  28.78
+                                        },
+                                        {
+                                            "partyNumber":  14,
+                                            "partyAbbreviation":  "PTB",
+                                            "partyName":  "PARTIDO TRABALHISTA BRASILEIRO",
+                                            "nominalVotes":  2,
+                                            "legendVotes":  10,
+                                            "totalVotes":  12,
+                                            "percentage":  0.1
+                                        },
+                                        {
+                                            "partyNumber":  15,
+                                            "partyAbbreviation":  "MDB",
+                                            "partyName":  "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+                                            "nominalVotes":  412,
+                                            "legendVotes":  65,
+                                            "totalVotes":  477,
+                                            "percentage":  3.86
+                                        },
+                                        {
+                                            "partyNumber":  18,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Rede Sustentabilidade",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  1,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        },
+                                        {
+                                            "partyNumber":  19,
+                                            "partyAbbreviation":  "PODE",
+                                            "partyName":  "PODEMOS",
+                                            "nominalVotes":  1,
+                                            "legendVotes":  1,
+                                            "totalVotes":  2,
+                                            "percentage":  0.02
+                                        },
+                                        {
+                                            "partyNumber":  22,
+                                            "partyAbbreviation":  "PL",
+                                            "partyName":  "PARTIDO LIBERAL",
+                                            "nominalVotes":  258,
+                                            "legendVotes":  40,
+                                            "totalVotes":  298,
+                                            "percentage":  2.41
+                                        },
+                                        {
+                                            "partyNumber":  23,
+                                            "partyAbbreviation":  "CIDADANIA",
+                                            "partyName":  "CIDADANIA",
+                                            "nominalVotes":  48,
+                                            "legendVotes":  5,
+                                            "totalVotes":  53,
+                                            "percentage":  0.43
+                                        },
+                                        {
+                                            "partyNumber":  30,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "Partido Novo",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  1,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        },
+                                        {
+                                            "partyNumber":  33,
+                                            "partyAbbreviation":  "PMN",
+                                            "partyName":  "PARTIDO DA MOBILIZAÇÃO NACIONAL",
+                                            "nominalVotes":  14,
+                                            "legendVotes":  5,
+                                            "totalVotes":  19,
+                                            "percentage":  0.15
+                                        },
+                                        {
+                                            "partyNumber":  36,
+                                            "partyAbbreviation":  null,
+                                            "partyName":  "AGIR",
+                                            "nominalVotes":  0,
+                                            "legendVotes":  2,
+                                            "totalVotes":  2,
+                                            "percentage":  0.02
+                                        },
+                                        {
+                                            "partyNumber":  40,
+                                            "partyAbbreviation":  "PSB",
+                                            "partyName":  "PARTIDO SOCIALISTA BRASILEIRO",
+                                            "nominalVotes":  4,
+                                            "legendVotes":  3,
+                                            "totalVotes":  7,
+                                            "percentage":  0.06
+                                        },
+                                        {
+                                            "partyNumber":  43,
+                                            "partyAbbreviation":  "PV",
+                                            "partyName":  "PARTIDO VERDE",
+                                            "nominalVotes":  3,
+                                            "legendVotes":  2,
+                                            "totalVotes":  5,
+                                            "percentage":  0.04
+                                        },
+                                        {
+                                            "partyNumber":  44,
+                                            "partyAbbreviation":  "UNIÃO",
+                                            "partyName":  "UNIÃO BRASIL",
+                                            "nominalVotes":  73,
+                                            "legendVotes":  30,
+                                            "totalVotes":  103,
+                                            "percentage":  0.83
+                                        },
+                                        {
+                                            "partyNumber":  45,
+                                            "partyAbbreviation":  "PSDB",
+                                            "partyName":  "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+                                            "nominalVotes":  18,
+                                            "legendVotes":  43,
+                                            "totalVotes":  61,
+                                            "percentage":  0.49
+                                        },
+                                        {
+                                            "partyNumber":  50,
+                                            "partyAbbreviation":  "PSOL",
+                                            "partyName":  "PARTIDO SOCIALISMO E LIBERDADE",
+                                            "nominalVotes":  45,
+                                            "legendVotes":  0,
+                                            "totalVotes":  45,
+                                            "percentage":  0.36
+                                        },
+                                        {
+                                            "partyNumber":  55,
+                                            "partyAbbreviation":  "PSD",
+                                            "partyName":  "PARTIDO SOCIAL DEMOCRÁTICO",
+                                            "nominalVotes":  32,
+                                            "legendVotes":  19,
+                                            "totalVotes":  51,
+                                            "percentage":  0.41
+                                        },
+                                        {
+                                            "partyNumber":  65,
+                                            "partyAbbreviation":  "PC do B",
+                                            "partyName":  "PARTIDO COMUNISTA DO BRASIL",
+                                            "nominalVotes":  1253,
+                                            "legendVotes":  31,
+                                            "totalVotes":  1284,
+                                            "percentage":  10.38
+                                        },
+                                        {
+                                            "partyNumber":  70,
+                                            "partyAbbreviation":  "AVANTE",
+                                            "partyName":  "AVANTE",
+                                            "nominalVotes":  131,
+                                            "legendVotes":  18,
+                                            "totalVotes":  149,
+                                            "percentage":  1.21
+                                        },
+                                        {
+                                            "partyNumber":  80,
+                                            "partyAbbreviation":  "UP",
+                                            "partyName":  "UNIDADE POPULAR",
+                                            "nominalVotes":  1,
+                                            "legendVotes":  0,
+                                            "totalVotes":  1,
+                                            "percentage":  0.01
+                                        },
+                                        {
+                                            "partyNumber":  90,
+                                            "partyAbbreviation":  "PROS",
+                                            "partyName":  "PARTIDO REPUBLICANO DA ORDEM SOCIAL",
+                                            "nominalVotes":  3,
+                                            "legendVotes":  0,
+                                            "totalVotes":  3,
+                                            "percentage":  0.02
+                                        }
+                                    ]
+                    }
+                ]
+}
